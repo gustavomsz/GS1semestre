@@ -28,15 +28,6 @@ h3 {
     padding: 0 16px;
 }
 
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-summary:focus {
-    outline: 3px solid #ffc72c;
-}
-
-
 .topbar {
     background-color: #000000;
 }
@@ -69,6 +60,10 @@ summary:focus {
     border: 2px solid #2a4a8f;
     border-radius: 10px;
     cursor: pointer;
+    transition: .2s ease;
+}
+.topbar button:hover{
+    border: 2px solid gold;
 }
 
 .header {
@@ -111,18 +106,14 @@ summary:focus {
     padding: 12px 14px;
     color: #f4f7ff;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 10px;
+    transition: .5s ease;
 }
 
 .menu a:hover {
     background-color: #13295c;
 }
 
-.menu a.active {
-    color: #061230;
-    background-color: #ffc72c;
-}
 
 .button {
     display: inline-block;
@@ -183,11 +174,6 @@ summary:focus {
     border-radius: 20px;
 }
 
-.small {
-    font-weight: normal;
-    font-size: 15px;
-    color: #c3cde6;
-}
 
 .section {
     padding: 64px 0;
@@ -678,7 +664,6 @@ body.contrast,
 .contrast .seats-text,
 .contrast .subtitle,
 .contrast .hint,
-.contrast .small,
 .contrast .info dt,
 .contrast .notice p,
 .contrast .status-cards p,
