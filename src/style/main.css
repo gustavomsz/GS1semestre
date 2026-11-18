@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-size: 18px;
-    font-family: "Outfit", sans-serif;
+    font-family: "Atkinson Hyperlegible", Arial, sans-serif;
     line-height: 1.6;
     color: #f4f7ff;
     background-color: #061230;
@@ -22,19 +22,26 @@ h3 {
     margin-top: 0;
 }
 
-
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 16px;
 }
 
-/* ===== Barra de acessibilidade ===== */
-.accessibility-bar {
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+summary:focus {
+    outline: 3px solid #ffc72c;
+}
+
+
+.topbar {
     background-color: #000000;
 }
 
-.accessibility-bar .container {
+.topbar .container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -43,38 +50,33 @@ h3 {
     padding-bottom: 6px;
 }
 
-.accessibility-title {
+.topbar-title {
     margin-right: auto;
+    font-size: 15px;
     font-weight: bold;
+    color: #c3cde6;
 }
 
-.accessibility-bar button {
+.topbar button {
     min-width: 48px;
     min-height: 44px;
     padding: 6px 14px;
+    font-family: inherit;
     font-size: 15px;
     font-weight: bold;
     color: #f4f7ff;
     background-color: #13295c;
     border: 2px solid #2a4a8f;
     border-radius: 10px;
-    transition: .2s ease;
+    cursor: pointer;
 }
 
-.accessibility-bar button:hover {
-    border: 2px solid #ffc72c;
-}
-
-
-
-
-/* ===== Cabeçalho ===== */
-.site-header {
+.header {
     background-color: #0b1d47;
     border-bottom: 3px solid #ffc72c;
 }
 
-.site-header .container {
+.header .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -88,7 +90,7 @@ h3 {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #ffffff;
+    color: #f4f7ff;
     text-decoration: none;
     font-size: 23px;
     font-weight: bold;
@@ -109,6 +111,7 @@ h3 {
     padding: 12px 14px;
     color: #f4f7ff;
     text-decoration: none;
+    font-weight: bold;
     border-radius: 10px;
 }
 
@@ -116,9 +119,11 @@ h3 {
     background-color: #13295c;
 }
 
+.menu a.active {
+    color: #061230;
+    background-color: #ffc72c;
+}
 
-
-/* ===== Botões ===== */
 .button {
     display: inline-block;
     padding: 16px 28px;
@@ -132,47 +137,42 @@ h3 {
     cursor: pointer;
 }
 
-.button-primary {
+.yellow-button {
     color: #061230;
     background-color: #ffc72c;
 }
 
-.button-primary:hover {
+.yellow-button:hover {
     background-color: #ffd75e;
 }
 
-.button-secondary {
+.border-button {
     color: #ffc72c;
     background-color: transparent;
 }
 
-.button-danger {
+.red-button {
     color: #f4f7ff;
     background-color: transparent;
     border-color: #ff5a5f;
 }
 
+.big-button {
+    text-align: center;
+}
 
-/* Grupo de botões lado a lado */
 .buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
 
-.button:disabled {
-    opacity: 0.6;
-}
-
-
-/* ===== Textos ===== */
-.text-muted {
+.seats-text {
     color: #c3cde6;
 }
 
-/* Etiqueta azul (ex.: "Transporte público acessível") */
 .tag,
-.step-badge {
+.step {
     display: inline-block;
     margin-bottom: 12px;
     padding: 4px 14px;
@@ -183,52 +183,46 @@ h3 {
     border-radius: 20px;
 }
 
-.required-note {
+.small {
     font-weight: normal;
     font-size: 15px;
     color: #c3cde6;
 }
 
-
-/* ===== Seções da página inicial ===== */
 .section {
     padding: 64px 0;
 }
 
-/* Seção com fundo um pouco mais claro, para alternar */
-.section-alt {
+.section-blue {
     background-color: #0b1d47;
 }
 
-.section-title {
+.title {
     font-size: 36px;
     padding-left: 14px;
     border-left: 6px solid #ffc72c;
 }
 
-
-/* ===== Hero (topo da página inicial) ===== */
-.hero {
+.intro {
     padding: 72px 0;
 }
 
-/* Texto de um lado e o exemplo do outro */
-.hero .container {
+.intro .container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 48px;
 }
 
-.hero .container>div {
+.intro .container>div {
     flex: 1 1 400px;
 }
 
-.hero h1 {
+.intro h1 {
     font-size: 54px;
 }
 
-.hero h1 span {
+.intro h1 span {
     color: #ffc72c;
 }
 
@@ -237,15 +231,14 @@ h3 {
     color: #c3cde6;
 }
 
-/* Cartão de exemplo do aviso ao motorista */
-.demo {
+.example {
     padding: 24px;
     background-color: #13295c;
     border: 2px solid #2a4a8f;
     border-radius: 24px;
 }
 
-.demo-alert {
+.example-alert {
     margin-bottom: 20px;
     padding: 16px;
     background-color: #061230;
@@ -253,13 +246,11 @@ h3 {
     border-radius: 12px;
 }
 
-.demo-alert strong {
+.example-alert strong {
     display: block;
     color: #ffc72c;
 }
 
-
-/* ===== Assentos (LED) ===== */
 .seats {
     display: flex;
     gap: 12px;
@@ -278,16 +269,13 @@ h3 {
     border-radius: 12px;
 }
 
-/* Assento reservado: LED aceso */
-.seat-lit {
+.seat-on {
     color: #061230;
     background-color: #ffc72c;
     border-color: #ffc72c;
 }
 
-
-/* ===== Cartões (Como funciona e Acessibilidade) ===== */
-.steps {
+.cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -304,8 +292,7 @@ h3 {
     border-radius: 16px;
 }
 
-/* Número redondo dos passos 1, 2 e 3 */
-.step-number {
+.number {
     display: block;
     width: 48px;
     height: 48px;
@@ -317,12 +304,9 @@ h3 {
     color: #061230;
     background-color: #ffc72c;
     border-radius: 24px;
-    /* metade do tamanho = círculo */
 }
 
-
-/* ===== Lista "Para quem é" ===== */
-.audience {
+.people {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -330,7 +314,7 @@ h3 {
     list-style: none;
 }
 
-.audience li {
+.people li {
     padding: 10px 18px;
     font-weight: bold;
     background-color: #13295c;
@@ -338,8 +322,6 @@ h3 {
     border-radius: 30px;
 }
 
-
-/* ===== Status das antenas ===== */
 .status {
     display: inline-block;
     padding: 4px 12px;
@@ -348,27 +330,27 @@ h3 {
     border-radius: 20px;
 }
 
-.status-coming {
+.status-yellow {
     color: #061230;
     background-color: #ffc72c;
 }
 
-.status-arrived {
+.status-green {
     color: #061230;
     background-color: #4ade80;
 }
 
-.status-left {
+.status-blue {
     color: #061230;
     background-color: #8fcbff;
 }
 
-.status-none {
+.status-gray {
     color: #f4f7ff;
     background-color: #33415f;
 }
 
-.status-list {
+.status-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
@@ -376,19 +358,17 @@ h3 {
     list-style: none;
 }
 
-.status-list li {
+.status-cards li {
     flex: 1 1 220px;
     padding: 20px;
     background-color: #13295c;
     border-radius: 16px;
 }
 
-.status-list p {
+.status-cards p {
     color: #c3cde6;
 }
 
-
-/* ===== Páginas com formulário ===== */
 .page {
     padding: 48px 0 72px;
 }
@@ -397,8 +377,7 @@ h3 {
     font-size: 41px;
 }
 
-/* Formulário de um lado e painel do outro */
-.form-grid {
+.row {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -406,27 +385,24 @@ h3 {
     margin-top: 32px;
 }
 
-.form-grid>form,
-.form-grid>div {
+.row>form,
+.row>div {
     flex: 2 1 400px;
 }
 
-.form-grid>aside {
+.row>aside {
     flex: 1 1 280px;
 }
 
-.form-card {
+.form-box {
     display: flex;
     flex-direction: column;
-    /* itens um embaixo do outro, ocupando a largura toda */
     padding: 32px;
     background-color: #0b1d47;
     border: 2px solid #2a4a8f;
     border-radius: 24px;
 }
 
-/* Cada campo do formulário */
-/* Em coluna: o nome em cima e a caixa de texto embaixo, ocupando a largura toda */
 .field {
     display: flex;
     flex-direction: column;
@@ -446,7 +422,6 @@ h3 {
     color: #c3cde6;
 }
 
-/* Caixas de texto e listas de seleção */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -461,7 +436,6 @@ select {
     border-radius: 12px;
 }
 
-/* Grupo de opções (radio e checkbox) */
 fieldset {
     margin: 0 0 24px;
     padding: 0;
@@ -473,15 +447,8 @@ legend {
     font-weight: bold;
 }
 
-.options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* Cada opção é uma caixa grande, fácil de clicar */
-.option {
-    flex: 1 1 220px;
+.choice {
+    margin-bottom: 24px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -492,47 +459,34 @@ legend {
     cursor: pointer;
 }
 
-/* Opções uma embaixo da outra */
-.options-single {
-    flex-direction: column;
-}
-
-.options-single .option {
-    flex: none;
-}
-
-.option:hover {
+.choice:hover {
     border-color: #8fcbff;
 }
 
-.option input {
+.choice input {
     width: 22px;
     height: 22px;
     accent-color: #ffc72c;
 }
 
-
-/* ===== Painel lateral ===== */
-.panel {
+.side-box {
     display: flex;
     flex-direction: column;
-    /* itens um embaixo do outro, ocupando a largura toda */
     padding: 28px;
     background-color: #13295c;
     border: 2px solid #2a4a8f;
     border-radius: 24px;
 }
 
-.panel h2 {
+.side-box h2 {
     font-size: 23px;
 }
 
-/* Lista de dados: nome à esquerda, valor à direita */
-.details-list {
+.info {
     margin: 0;
 }
 
-.details-list div {
+.info div {
     display: flex;
     justify-content: space-between;
     gap: 12px;
@@ -540,18 +494,17 @@ legend {
     border-bottom: 1px solid #2a4a8f;
 }
 
-.details-list dt {
+.info dt {
     color: #c3cde6;
 }
 
-.details-list dd {
+.info dd {
     margin: 0;
     font-weight: bold;
     text-align: right;
 }
 
-/* Caixa de observação */
-.note {
+.tip {
     margin-top: 20px;
     padding: 16px;
     font-size: 16px;
@@ -560,9 +513,7 @@ legend {
     border-radius: 12px;
 }
 
-
-/* ===== Mensagens (criadas pelo JavaScript) ===== */
-.message {
+.msg {
     margin: 24px 0;
     padding: 16px 20px;
     text-align: left;
@@ -570,32 +521,29 @@ legend {
     border-radius: 12px;
 }
 
-.message p {
+.msg p {
     margin: 0;
 }
 
-.message-error {
+.msg-red {
     border-left: 6px solid #ff5a5f;
 }
 
-.message-success {
+.msg-green {
     border-left: 6px solid #4ade80;
 }
 
-
-/* ===== Página de confirmação ===== */
-.success {
+.done {
     max-width: 720px;
     text-align: center;
 }
 
-.success .panel {
+.done .side-box {
     margin: 32px 0;
     text-align: left;
 }
 
-/* Círculo verde com o "✓" */
-.success-icon {
+.done-icon {
     width: 96px;
     height: 96px;
     margin: 0 auto 24px;
@@ -604,17 +552,15 @@ legend {
     color: #061230;
     background-color: #4ade80;
     border-radius: 48px;
-    /* metade do tamanho = círculo */
 }
 
-/* Lista dos pontos do ônibus */
-.route {
+.stops {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.route li {
+.stops li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -624,24 +570,22 @@ legend {
     border-left: 4px solid #2a4a8f;
 }
 
-/* Ponto onde a pessoa vai embarcar */
-.route li.current {
+.stops li.here {
     border-left-color: #ffc72c;
 }
 
-.arrival-alert {
+.alert-text {
     margin: 16px 0;
     font-weight: bold;
     color: #ffc72c;
 }
 
-/* Botão "Cancelar solicitação" que abre a confirmação */
-.cancel-box {
+.cancel {
     margin-top: 24px;
     text-align: left;
 }
 
-.cancel-box summary {
+.cancel summary {
     padding: 16px;
     font-weight: bold;
     text-align: center;
@@ -650,14 +594,12 @@ legend {
     cursor: pointer;
 }
 
-.cancel-box .panel {
+.cancel .side-box {
     margin-top: 16px;
     border-color: #ff5a5f;
 }
 
-
-/* ===== Painel do motorista ===== */
-.notification {
+.notice {
     display: flex;
     gap: 16px;
     margin-bottom: 16px;
@@ -668,23 +610,17 @@ legend {
     border-radius: 16px;
 }
 
-/* Avisos antigos (cancelado ou concluído) */
-.notification.past {
-    border-left-color: #2a4a8f;
-}
-
-.notification h3 {
+.notice h3 {
     margin-bottom: 4px;
     font-size: 20px;
 }
 
-.notification p {
+.notice p {
     margin: 0;
     color: #c3cde6;
 }
 
-/* Quadrado com "!", "✕" ou "✓" */
-.badge {
+.icon {
     width: 52px;
     height: 52px;
     font-size: 25px;
@@ -696,138 +632,89 @@ legend {
     border-radius: 14px;
 }
 
-.notification.past .badge {
-    color: #f4f7ff;
-    background-color: #2a4a8f;
-}
-
-
-/* ===== Rodapé ===== */
-.site-footer {
+.footer {
     padding: 40px 0;
     background-color: #0b1d47;
     border-top: 3px solid #ffc72c;
 }
 
-.site-footer .container {
+.footer .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 24px;
 }
 
-.site-footer p {
+.footer p {
     margin: 0 0 6px;
     font-size: 16px;
     color: #c3cde6;
 }
 
-
-/* ===== Tamanho do texto (botões A+ e A-) =====
-   O zoom aumenta a página inteira: textos, botões e espaços */
-.font-medium body {
-    zoom: 1.15;
-}
-
-.font-large body {
-    zoom: 1.3;
-}
-
-
-/* ===== Alto contraste =====
-   Fundo preto, texto branco, bordas brancas e destaques em amarelo forte */
-.high-contrast body,
-.high-contrast .site-header,
-.high-contrast .site-footer,
-.high-contrast .section-alt,
-.high-contrast .card,
-.high-contrast .panel,
-.high-contrast .form-card,
-.high-contrast .option,
-.high-contrast .demo,
-.high-contrast .demo-alert,
-.high-contrast .note,
-.high-contrast .message,
-.high-contrast .notification,
-.high-contrast .seat,
-.high-contrast .audience li,
-.high-contrast .status-list li,
-.high-contrast input,
-.high-contrast select,
-.high-contrast .accessibility-bar button {
+body.contrast,
+.contrast .header,
+.contrast .footer,
+.contrast .section-blue,
+.contrast .card,
+.contrast .side-box,
+.contrast .form-box,
+.contrast .choice,
+.contrast .example,
+.contrast .example-alert,
+.contrast .tip,
+.contrast .msg,
+.contrast .notice,
+.contrast .seat,
+.contrast .people li,
+.contrast .status-cards li,
+.contrast input,
+.contrast select,
+.contrast .topbar button {
     color: #ffffff;
     background-color: #000000;
     border-color: #ffffff;
 }
 
-.high-contrast .text-muted,
-.high-contrast .subtitle,
-.high-contrast .hint,
-.high-contrast .required-note,
-.high-contrast .details-list dt,
-.high-contrast .notification p,
-.high-contrast .status-list p,
-.high-contrast .site-footer p,
-.high-contrast .accessibility-title {
+.contrast .seats-text,
+.contrast .subtitle,
+.contrast .hint,
+.contrast .small,
+.contrast .info dt,
+.contrast .notice p,
+.contrast .status-cards p,
+.contrast .footer p,
+.contrast .topbar-title {
     color: #ffffff;
 }
 
-.high-contrast a,
-.high-contrast .logo,
-.high-contrast .menu a,
-.high-contrast .hero h1 span,
-.high-contrast .arrival-alert {
+.contrast a,
+.contrast .logo,
+.contrast .menu a,
+.contrast .intro h1 span,
+.contrast .alert-text {
     color: #ffff00;
 }
 
-.high-contrast .button-primary,
-.high-contrast .menu a.active,
-.high-contrast .step-number,
-.high-contrast .tag,
-.high-contrast .step-badge,
-.high-contrast .badge,
-.high-contrast .seat-lit,
-.high-contrast .status,
-.high-contrast .accessibility-bar button.on {
+.contrast .yellow-button,
+.contrast .menu a.active,
+.contrast .number,
+.contrast .tag,
+.contrast .step,
+.contrast .icon,
+.contrast .seat-on,
+.contrast .status {
     color: #000000;
     background-color: #ffff00;
     border-color: #ffff00;
 }
 
-.high-contrast .button-secondary {
+.contrast .border-button {
     color: #ffff00;
     border-color: #ffff00;
 }
 
-.high-contrast .site-header,
-.high-contrast .section-title,
-.high-contrast .route li.current {
+.contrast .header,
+.contrast .title,
+.contrast .stops li.here {
     border-color: #ffff00;
-}
-
-
-/* ===== Celular ===== */
-@media (max-width: 600px) {
-    body {
-        font-size: 17px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .site-header .container,
-    .menu {
-        justify-content: center;
-    }
-
-    .form-card,
-    .panel {
-        padding: 20px;
-    }
-
-    /* Botões um embaixo do outro, ocupando a largura toda */
-    .buttons {
-        flex-direction: column;
-    }
 }

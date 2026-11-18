@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do motorista - Prioriza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+
+<body onload="showDriverPage()">
+
+    <div class="topbar">
+        <div class="container">
+            <span class="topbar-title">Acessibilidade</span>
+            <button type="button" onclick="smallerText()" aria-label="Diminuir o tamanho do texto">A−</button>
+            <button type="button" onclick="biggerText()" aria-label="Aumentar o tamanho do texto">A+</button>
+            <button type="button" onclick="changeContrast()">Alto contraste</button>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a class="logo" href="../../index.html">
+                <svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M24 2C13.5 2 5 10.3 5 20.6 5 34 24 46 24 46s19-12 19-25.4C43 10.3 34.5 2 24 2z"
+                        fill="#1e5bd8" />
+                    <rect x="14" y="10" width="20" height="21" rx="4" fill="#fff" />
+                    <rect x="17" y="13" width="14" height="8" rx="1.5" fill="#1e5bd8" />
+                    <circle cx="19" cy="26.5" r="1.8" fill="#1e5bd8" />
+                    <circle cx="29" cy="26.5" r="1.8" fill="#1e5bd8" />
+                    <path d="M5 30c9 7 30 6 38-7" stroke="#ffc72c" stroke-width="3.5" fill="none"
+                        stroke-linecap="round" />
+                </svg>
+                PRIORIZA
+            </a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="register.html">Cadastro</a></li>
+                    <li><a href="request.html">Solicitar</a></li>
+                    <li><a href="driver.html" class="active" aria-current="page">Motorista</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content">
+        <section class="page">
+            <div class="container">
+                <h1>Painel do motorista</h1>
+                <p>Ônibus 971-m · Linha 2002-10 · avisos de atendimento prioritário</p>
+
+                <div class="row">
+                    <div>
+                        <h2>Último aviso</h2>
+                        <div class="notice">
+                            <span class="icon" aria-hidden="true">!</span>
+                            <div>
+                                <h3>Aviso do Prioriza</h3>
+                                <p id="driver-alert">Nenhum aviso no momento.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="side-box">
+                        <h2>Assentos preferenciais</h2>
+                        <div class="seats">
+                            <div class="seat" id="seat1">Livre</div>
+                            <div class="seat" id="seat2">Livre</div>
+                            <div class="seat" id="seat3">Livre</div>
+                        </div>
+                        <dl class="info">
+                            <div>
+                                <dt>Reservados</dt>
+                                <dd id="reserved-seats">0 de 3</dd>
+                            </div>
+                            <div>
+                                <dt>LED</dt>
+                                <dd id="driver-led">APAGADO</dd>
+                            </div>
+                        </dl>
+                        <button class="button border-button big-button" type="button" onclick="resetDemo()">Limpar dados
+                            da demonstração</button>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <p><strong>PRIORIZA</strong> · Time 404</p>
+                <p>Alinhado aos ODS 10 (redução das desigualdades) e ODS 11 (cidades sustentáveis).</p>
+            </div>
+            <p>O Prioriza auxilia na comunicação, mas não substitui a ajuda humana.</p>
+        </div>
+    </footer>
+
+    <script src="../js/prioriza.js"></script>
+    <script src="../js/interface.js"></script>
+    <script src="../js/accessibility.js"></script>
+
+</body>
+
+</html>

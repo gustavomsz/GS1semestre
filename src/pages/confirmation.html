@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua solicitação - Prioriza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+
+<body onload="showConfirmationPage()">
+    <div class="topbar">
+        <div class="container">
+            <span class="topbar-title">Acessibilidade</span>
+            <button type="button" onclick="smallerText()" aria-label="Diminuir o tamanho do texto">A−</button>
+            <button type="button" onclick="biggerText()" aria-label="Aumentar o tamanho do texto">A+</button>
+            <button type="button" onclick="changeContrast()">Alto contraste</button>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a class="logo" href="../../index.html">
+                <svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M24 2C13.5 2 5 10.3 5 20.6 5 34 24 46 24 46s19-12 19-25.4C43 10.3 34.5 2 24 2z"
+                        fill="#1e5bd8" />
+                    <rect x="14" y="10" width="20" height="21" rx="4" fill="#fff" />
+                    <rect x="17" y="13" width="14" height="8" rx="1.5" fill="#1e5bd8" />
+                    <circle cx="19" cy="26.5" r="1.8" fill="#1e5bd8" />
+                    <circle cx="29" cy="26.5" r="1.8" fill="#1e5bd8" />
+                    <path d="M5 30c9 7 30 6 38-7" stroke="#ffc72c" stroke-width="3.5" fill="none"
+                        stroke-linecap="round" />
+                </svg>
+                PRIORIZA
+            </a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="register.html">Cadastro</a></li>
+                    <li><a href="request.html" class="active" aria-current="page">Solicitar</a></li>
+                    <li><a href="driver.html">Motorista</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content">
+        <section class="page">
+            <div class="container done">
+                <div id="active-request">
+                    <div class="done-icon" aria-hidden="true">&#10003;</div>
+                    <p class="step">Passo 3 de 3</p>
+                    <h1>Solicitação enviada com sucesso!</h1>
+                    <p>Seu pedido já foi informado ao motorista.</p>
+                    <p class="msg msg-green" id="driver-message"></p>
+
+                    <div class="side-box">
+                        <h2>Sua solicitação</h2>
+                        <dl class="info">
+                            <div>
+                                <dt>Linha</dt>
+                                <dd id="line"></dd>
+                            </div>
+                            <div>
+                                <dt>Ônibus</dt>
+                                <dd id="bus"></dd>
+                            </div>
+                            <div>
+                                <dt>Ponto de embarque</dt>
+                                <dd id="summary-stop"></dd>
+                            </div>
+                            <div>
+                                <dt>Assentos</dt>
+                                <dd id="summary-seats"></dd>
+                            </div>
+                            <div>
+                                <dt>LED do assento</dt>
+                                <dd id="summary-led"></dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <div class="side-box">
+                        <h2>Onde está o ônibus</h2>
+                        <ul class="stops">
+                            <li id="stop-item1"><span id="stop1">Terminal Pq. D. Pedro II</span> <span
+                                    class="status status-gray" id="status1">SEM ÔNIBUS</span></li>
+                            <li id="stop-item2"><span id="stop2">Lgo. Pateo do Colégio</span> <span
+                                    class="status status-gray" id="status2">SEM ÔNIBUS</span></li>
+                            <li id="stop-item3"><span id="stop3">R. Boa Vista, 364</span> <span
+                                    class="status status-gray" id="status3">SEM ÔNIBUS</span></li>
+                        </ul>
+                        <p class="alert-text" id="arrival-alert" aria-live="polite"></p>
+                        <button class="button yellow-button big-button" type="button" id="move-button"
+                            onclick="moveBus()">Avançar ônibus</button>
+                    </div>
+
+                    <details class="cancel" id="cancel-box">
+                        <summary>Cancelar solicitação</summary>
+                        <div class="side-box">
+                            <h2>Tem certeza?</h2>
+                            <p>O motorista será avisado de que você não precisa mais do atendimento.</p>
+                            <button class="button red-button big-button" type="button" onclick="cancelRequest()">Sim,
+                                cancelar solicitação</button>
+                        </div>
+                    </details>
+                </div>
+
+                <div id="cancelled" style="display: none">
+                    <h1>Solicitação cancelada</h1>
+                    <p class="msg msg-green" aria-live="polite">O cancelamento do agendamento foi realizado com sucesso.
+                    </p>
+                    <a class="button yellow-button" href="request.html">Fazer nova solicitação</a>
+                </div>
+
+                <div id="no-request" style="display: none">
+                    <h1>Nenhuma solicitação ativa</h1>
+                    <p>Você ainda não pediu atendimento prioritário.</p>
+                    <a class="button yellow-button" href="request.html">Solicitar atendimento</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <p><strong>PRIORIZA</strong> · Time 404</p>
+                <p>Alinhado aos ODS 10 (redução das desigualdades) e ODS 11 (cidades sustentáveis).</p>
+            </div>
+            <p>O Prioriza auxilia na comunicação, mas não substitui a ajuda humana.</p>
+        </div>
+    </footer>
+
+    <script src="../js/prioriza.js"></script>
+    <script src="../js/interface.js"></script>
+    <script src="../js/accessibility.js"></script>
+</body>
+
+</html>
