@@ -13,12 +13,13 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#content">Pular para o conteúdo</a>
     <div class="topbar">
         <div class="container">
             <span class="topbar-title">Acessibilidade</span>
-            <button type="button" onclick="smallerText()" aria-label="Diminuir o tamanho do texto">A−</button>
-            <button type="button" onclick="biggerText()" aria-label="Aumentar o tamanho do texto">A+</button>
-            <button type="button" onclick="changeContrast()">Alto contraste</button>
+            <button type="button" onclick="diminuirTexto()" aria-label="Diminuir o tamanho do texto">A−</button>
+            <button type="button" onclick="aumentarTexto()" aria-label="Aumentar o tamanho do texto">A+</button>
+            <button type="button" onclick="alternarContraste()">Alto contraste</button>
         </div>
     </div>
 
@@ -48,7 +49,7 @@
         </div>
     </header>
 
-    <main id="content">
+    <main id="content" tabindex="-1">
         <section class="intro">
             <div class="container">
                 <div>
@@ -113,7 +114,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section">
+        <section class="section section-blue">
             <div class="container">
                 <h2 class="title">Feito para todas as pessoas</h2>
                 <p>Use a barra de acessibilidade no topo de qualquer página.</p>
@@ -145,7 +146,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section section-blue">
+        <section class="section">
             <div class="container">
                 <h2 class="title">Status no ponto de ônibus</h2>
                 <p>Antenas nos pontos informam onde o ônibus está.</p>
@@ -184,6 +185,7 @@
     <script src="src/js/prioriza.js"></script>
     <script src="src/js/interface.js"></script>
     <script src="src/js/accessibility.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </body>
 
 </html>

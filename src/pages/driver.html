@@ -12,14 +12,15 @@
     <link rel="stylesheet" href="../style/main.css">
 </head>
 
-<body onload="showDriverPage()">
+<body onload="mostraPaginaMotorista()">
+    <a class="skip-link" href="#content">Pular para o conteúdo</a>
 
     <div class="topbar">
         <div class="container">
             <span class="topbar-title">Acessibilidade</span>
-            <button type="button" onclick="smallerText()" aria-label="Diminuir o tamanho do texto">A−</button>
-            <button type="button" onclick="biggerText()" aria-label="Aumentar o tamanho do texto">A+</button>
-            <button type="button" onclick="changeContrast()">Alto contraste</button>
+            <button type="button" onclick="diminuirTexto()" aria-label="Diminuir o tamanho do texto">A−</button>
+            <button type="button" onclick="aumentarTexto()" aria-label="Aumentar o tamanho do texto">A+</button>
+            <button type="button" onclick="alternarContraste()">Alto contraste</button>
         </div>
     </div>
 
@@ -49,7 +50,7 @@
         </div>
     </header>
 
-    <main id="content">
+    <main id="content" tabindex="-1">
         <section class="page">
             <div class="container">
                 <h1>Painel do motorista</h1>
@@ -84,7 +85,7 @@
                                 <dd id="driver-led">APAGADO</dd>
                             </div>
                         </dl>
-                        <button class="button border-button big-button" type="button" onclick="resetDemo()">Limpar dados
+                        <button class="button border-button big-button" type="button" onclick="reiniciarDemonstracao()">Limpar dados
                             da demonstração</button>
                     </aside>
                 </div>
@@ -106,6 +107,7 @@
     <script src="../js/interface.js"></script>
     <script src="../js/accessibility.js"></script>
 
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </body>
 
 </html>

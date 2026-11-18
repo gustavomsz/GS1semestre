@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="../style/main.css">
 </head>
 
-<body onload="showConfirmationPage()">
+<body onload="mostraPaginaConfirmacao()">
+    <a class="skip-link" href="#content">Pular para o conteúdo</a>
     <div class="topbar">
         <div class="container">
             <span class="topbar-title">Acessibilidade</span>
-            <button type="button" onclick="smallerText()" aria-label="Diminuir o tamanho do texto">A−</button>
-            <button type="button" onclick="biggerText()" aria-label="Aumentar o tamanho do texto">A+</button>
-            <button type="button" onclick="changeContrast()">Alto contraste</button>
+            <button type="button" onclick="diminuirTexto()" aria-label="Diminuir o tamanho do texto">A−</button>
+            <button type="button" onclick="aumentarTexto()" aria-label="Aumentar o tamanho do texto">A+</button>
+            <button type="button" onclick="alternarContraste()">Alto contraste</button>
         </div>
     </div>
 
@@ -48,7 +49,7 @@
         </div>
     </header>
 
-    <main id="content">
+    <main id="content" tabindex="-1">
         <section class="page">
             <div class="container done">
                 <div id="active-request">
@@ -96,7 +97,7 @@
                         </ul>
                         <p class="alert-text" id="arrival-alert" aria-live="polite"></p>
                         <button class="button yellow-button big-button" type="button" id="move-button"
-                            onclick="moveBus()">Avançar ônibus</button>
+                            onclick="moverOnibus()">Avançar ônibus</button>
                     </div>
 
                     <details class="cancel" id="cancel-box">
@@ -104,7 +105,7 @@
                         <div class="side-box">
                             <h2>Tem certeza?</h2>
                             <p>O motorista será avisado de que você não precisa mais do atendimento.</p>
-                            <button class="button red-button big-button" type="button" onclick="cancelRequest()">Sim,
+                            <button class="button red-button big-button" type="button" onclick="cancelarSolicitacao()">Sim,
                                 cancelar solicitação</button>
                         </div>
                     </details>
@@ -139,6 +140,7 @@
     <script src="../js/prioriza.js"></script>
     <script src="../js/interface.js"></script>
     <script src="../js/accessibility.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </body>
 
 </html>

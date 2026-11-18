@@ -36,6 +36,22 @@ summary:focus {
     outline: 3px solid #ffc72c;
 }
 
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 100;
+    padding: 12px 20px;
+    font-weight: bold;
+    color: #061230;
+    background-color: #ffc72c;
+    border-radius: 10px;
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
 
 .topbar {
     background-color: #000000;
@@ -691,11 +707,13 @@ body.contrast,
 .contrast .logo,
 .contrast .menu a,
 .contrast .intro h1 span,
-.contrast .alert-text {
+.contrast .alert-text,
+.contrast .example-alert strong {
     color: #ffff00;
 }
 
 .contrast .yellow-button,
+.contrast .skip-link,
 .contrast .menu a.active,
 .contrast .number,
 .contrast .tag,
@@ -717,4 +735,18 @@ body.contrast,
 .contrast .title,
 .contrast .stops li.here {
     border-color: #ffff00;
+}
+
+@media (max-width: 600px) {
+    .intro h1 {
+        font-size: 38px;
+    }
+
+    .page h1 {
+        font-size: 32px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
 }
