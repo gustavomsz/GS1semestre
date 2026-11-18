@@ -1,4 +1,4 @@
-# PRIORIZA - Mobilidade sem barreiras
+# PRIORIZA
 
 Site do Prioriza: o passageiro com direito a atendimento prioritário avisa o motorista antes de o ônibus chegar ao ponto, e o assento preferencial é sinalizado com um LED.
 
@@ -11,13 +11,6 @@ Site do Prioriza: o passageiro com direito a atendimento prioritário avisa o mo
 | Marina Lobato Soares | 575475 |
 | Jamil de Jesus Chaluppe Filho | 575697 |
 | Gustavo Moreira Souza | 576147 |
-
-## Como abrir
-
-1. Abra a pasta `prioriza-site` no VS Code.
-2. Clique com o botão direito no `index.html` e escolha **Open with Live Server** (extensão Live Server).
-
-Também funciona abrindo o `index.html` direto no navegador.
 
 ## Páginas
 
@@ -32,19 +25,23 @@ Também funciona abrindo o `index.html` direto no navegador.
 ## Estrutura
 
 ```
-prioriza-site/
-├── index.html
-├── register.html
-├── request.html
-├── confirmation.html
-├── driver.html
-├── css/
-│   └── style.css
-├── js/
-│   ├── prioriza.js
-│   ├── interface.js
-│   └── accessibility.js
-└── images/
+GS1semestre/
+└── src/
+    ├── assets/
+    │   └── imgs/
+    ├── pages/
+    │   ├── confirmation.html
+    │   ├── driver.html
+    │   ├── register.html
+    │   └── request.html
+    ├── script/
+    │   ├── accessibility.js
+    │   ├── interface.js
+    │   └── main.js
+    ├── style/
+    │   └── main.css
+    ├── index.html
+    └── README.md
 ```
 
 ## JavaScript
