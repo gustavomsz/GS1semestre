@@ -16,11 +16,11 @@ nomedoprojeto/
     │    ├── historia.html
     │    └── contatos.html
     ├── script/
-    │   ├── main.js
+    │   ├── main.jsco
     └── style/
         └── main.css
 
-
+```
 
 
 

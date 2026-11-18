@@ -1,11 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prioriza - Mobilidade sem barreiras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/style/main.css">
+    <script src="js/accessibility.js"></script>
 </head>
+
 <body>
-    
+    <div class="accessibility-bar" role="region" aria-label="Opções de acessibilidade">
+        <div class="container">
+            <span class="accessibility-title">Acessibilidade</span>
+            <button>A−</button>
+            <button>A+</button>
+            <button>Alto contraste</button>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M24 2C13.5 2 5 10.3 5 20.6 5 34 24 46 24 46s19-12 19-25.4C43 10.3 34.5 2 24 2z"
+                        fill="#1e5bd8" />
+                    <rect x="14" y="10" width="20" height="21" rx="4" fill="#fff" />
+                    <rect x="17" y="13" width="14" height="8" rx="1.5" fill="#1e5bd8" />
+                    <circle cx="19" cy="26.5" r="1.8" fill="#1e5bd8" />
+                    <circle cx="29" cy="26.5" r="1.8" fill="#1e5bd8" />
+                    <path d="M5 30c9 7 30 6 38-7" stroke="#ffc72c" stroke-width="3.5" fill="none"
+                        stroke-linecap="round" />
+                </svg>
+                PRIORIZA
+            </a>
+            <nav aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="register.html">Cadastro</a></li>
+                    <li><a href="request.html">Solicitar</a></li>
+                    <li><a href="driver.html">Motorista</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content">
+        <section class="hero">
+            <div class="container">
+                <div>
+                    <span class="tag">Transporte público acessível</span>
+                    <h1>Mobilidade <span>sem barreiras.</span></h1>
+                    <p class="subtitle">Solicite atendimento prioritário antes de o ônibus chegar. O motorista é avisado
+                        com antecedência e o assento preferencial é sinalizado para os outros passageiros.</p>
+                    <div class="buttons">
+                        <a class="button button-primary" href="request.html">Solicitar atendimento</a>
+                        <a class="button button-secondary" href="register.html">Criar cadastro</a>
+                    </div>
+                </div>
+
+                <div class="demo" aria-label="Exemplo de aviso enviado ao motorista">
+                    <div class="demo-alert">
+                        <strong>Aviso ao motorista</strong>
+                        Ana · Ônibus 971-m · Linha 2002-10 · 1 assento
+                    </div>
+                    <p class="text-muted">Assentos preferenciais</p>
+                    <div class="seats">
+                        <div class="seat seat-lit">Reservado</div>
+                        <div class="seat">Livre</div>
+                        <div class="seat">Livre</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Como funciona</h2>
+                <ol class="steps">
+                    <li class="card">
+                        <span class="step-number">1</span>
+                        <h3>Faça seu cadastro</h3>
+                        <p class="text-muted">Informe seus dados e o tipo de atendimento de que você precisa.</p>
+                    </li>
+                    <li class="card">
+                        <span class="step-number">2</span>
+                        <h3>Escolha a linha e o ponto</h3>
+                        <p class="text-muted">Selecione o ônibus e onde vai embarcar, antes de ele chegar.</p>
+                    </li>
+                    <li class="card">
+                        <span class="step-number">3</span>
+                        <h3>Motorista avisado</h3>
+                        <p class="text-muted">O motorista recebe o aviso e o LED do assento preferencial acende.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Para quem é o Prioriza</h2>
+                <p class="text-muted">Passageiros com direito ao atendimento prioritário:</p>
+                <ul class="audience">
+                    <li>Deficiência física</li>
+                    <li>Deficiência visual</li>
+                    <li>Deficiência auditiva</li>
+                    <li>Idosos</li>
+                    <li>Mobilidade reduzida</li>
+                    <li>Gestantes</li>
+                    <li>Pessoas autistas</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Feito para todas as pessoas</h2>
+                <p class="text-muted">Use a barra de acessibilidade no topo de qualquer página.</p>
+                <ul class="steps accessible">
+                    <li class="card">
+                        <h3>Deficiência visual</h3>
+                        <p class="text-muted">Texto maior, alto contraste, avisos lidos em voz alta e compatível com
+                            leitores de tela.</p>
+                    </li>
+                    <li class="card">
+                        <h3>Deficiência auditiva</h3>
+                        <p class="text-muted">Tradução em Libras pelo VLibras, todos os avisos escritos na tela e
+                            vibração no celular quando o ônibus chega.</p>
+                    </li>
+                    <li class="card">
+                        <h3>Deficiência física e mobilidade reduzida</h3>
+                        <p class="text-muted">Botões grandes, fáceis de tocar, e o site inteiro pode ser usado só com o
+                            teclado.</p>
+                    </li>
+                    <li class="card">
+                        <h3>Autismo e deficiência intelectual</h3>
+                        <p class="text-muted">Linguagem simples, passos numerados e nada piscando ou se mexendo sem você
+                            pedir.</p>
+                    </li>
+                    <li class="card">
+                        <h3>Idosos</h3>
+                        <p class="text-muted">Letras grandes, poucas etapas e uma ação principal por página.</p>
+                    </li>
+                    <li class="card">
+                        <h3>Gestantes</h3>
+                        <p class="text-muted">Solicitação rápida, feita antes de sair de casa, para não esperar em pé.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Status no ponto de ônibus</h2>
+                <p class="text-muted">Antenas nos pontos informam onde o ônibus está.</p>
+                <ul class="status-list">
+                    <li>
+                        <span class="status status-coming">A CAMINHO</span>
+                        <p>O ônibus está vindo para o seu ponto.</p>
+                    </li>
+                    <li>
+                        <span class="status status-arrived">ÔNIBUS CHEGOU</span>
+                        <p>Hora de embarcar.</p>
+                    </li>
+                    <li>
+                        <span class="status status-left">ACABOU DE SAIR</span>
+                        <p>O ônibus seguiu para o próximo ponto.</p>
+                    </li>
+                    <li>
+                        <span class="status status-none">SEM ÔNIBUS</span>
+                        <p>Nenhum ônibus da linha por perto.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div>
+                <p><strong>PRIORIZA</strong> · Time 404</p>
+                <p>Alinhado aos ODS 10 (redução das desigualdades) e ODS 11 (cidades sustentáveis).</p>
+            </div>
+            <p>O Prioriza auxilia na comunicação, mas não substitui a ajuda humana.</p>
+        </div>
+    </footer>
+    <script src="js/prioriza.js"></script>
+    <script src="js/interface.js"></script>
+    <!-- VLibras: tradução do site para Libras (governo federal) -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
 </body>
+
 </html>

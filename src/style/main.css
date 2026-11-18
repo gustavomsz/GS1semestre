@@ -1,0 +1,833 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    line-height: 1.6;
+    color: #f4f7ff;
+    background-color: #061230;
+}
+
+a {
+    color: #8fcbff;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* ===== Barra de acessibilidade ===== */
+.accessibility-bar {
+    background-color: #000000;
+}
+
+.accessibility-bar .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.accessibility-title {
+    margin-right: auto;
+    font-weight: bold;
+}
+
+.accessibility-bar button {
+    min-width: 48px;
+    min-height: 44px;
+    padding: 6px 14px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #f4f7ff;
+    background-color: #13295c;
+    border: 2px solid #2a4a8f;
+    border-radius: 10px;
+    transition: .2s ease;
+}
+
+.accessibility-bar button:hover {
+    border: 2px solid #ffc72c;
+}
+
+
+
+
+/* ===== Cabeçalho ===== */
+.site-header {
+    background-color: #0b1d47;
+    border-bottom: 3px solid #ffc72c;
+}
+
+.site-header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 14px;
+    color: #f4f7ff;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.menu a:hover {
+    background-color: #13295c;
+}
+
+
+
+/* ===== Botões ===== */
+.button {
+    display: inline-block;
+    padding: 16px 28px;
+    font-family: inherit;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 3px solid #ffc72c;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.button-primary {
+    color: #061230;
+    background-color: #ffc72c;
+}
+
+.button-primary:hover {
+    background-color: #ffd75e;
+}
+
+.button-secondary {
+    color: #ffc72c;
+    background-color: transparent;
+}
+
+.button-danger {
+    color: #f4f7ff;
+    background-color: transparent;
+    border-color: #ff5a5f;
+}
+
+
+/* Grupo de botões lado a lado */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.button:disabled {
+    opacity: 0.6;
+}
+
+
+/* ===== Textos ===== */
+.text-muted {
+    color: #c3cde6;
+}
+
+/* Etiqueta azul (ex.: "Transporte público acessível") */
+.tag,
+.step-badge {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 4px 14px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #061230;
+    background-color: #8fcbff;
+    border-radius: 20px;
+}
+
+.required-note {
+    font-weight: normal;
+    font-size: 15px;
+    color: #c3cde6;
+}
+
+
+/* ===== Seções da página inicial ===== */
+.section {
+    padding: 64px 0;
+}
+
+/* Seção com fundo um pouco mais claro, para alternar */
+.section-alt {
+    background-color: #0b1d47;
+}
+
+.section-title {
+    font-size: 36px;
+    padding-left: 14px;
+    border-left: 6px solid #ffc72c;
+}
+
+
+/* ===== Hero (topo da página inicial) ===== */
+.hero {
+    padding: 72px 0;
+}
+
+/* Texto de um lado e o exemplo do outro */
+.hero .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero .container>div {
+    flex: 1 1 400px;
+}
+
+.hero h1 {
+    font-size: 54px;
+}
+
+.hero h1 span {
+    color: #ffc72c;
+}
+
+.subtitle {
+    font-size: 22px;
+    color: #c3cde6;
+}
+
+/* Cartão de exemplo do aviso ao motorista */
+.demo {
+    padding: 24px;
+    background-color: #13295c;
+    border: 2px solid #2a4a8f;
+    border-radius: 24px;
+}
+
+.demo-alert {
+    margin-bottom: 20px;
+    padding: 16px;
+    background-color: #061230;
+    border-left: 6px solid #ffc72c;
+    border-radius: 12px;
+}
+
+.demo-alert strong {
+    display: block;
+    color: #ffc72c;
+}
+
+
+/* ===== Assentos (LED) ===== */
+.seats {
+    display: flex;
+    gap: 12px;
+    margin: 8px 0;
+}
+
+.seat {
+    flex: 1;
+    padding: 16px 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #c3cde6;
+    background-color: #061230;
+    border: 2px solid #2a4a8f;
+    border-radius: 12px;
+}
+
+/* Assento reservado: LED aceso */
+.seat-lit {
+    color: #061230;
+    background-color: #ffc72c;
+    border-color: #ffc72c;
+}
+
+
+/* ===== Cartões (Como funciona e Acessibilidade) ===== */
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 32px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.card {
+    flex: 1 1 280px;
+    padding: 28px;
+    background-color: #13295c;
+    border: 2px solid #2a4a8f;
+    border-radius: 16px;
+}
+
+/* Número redondo dos passos 1, 2 e 3 */
+.step-number {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 48px;
+    text-align: center;
+    color: #061230;
+    background-color: #ffc72c;
+    border-radius: 24px;
+    /* metade do tamanho = círculo */
+}
+
+
+/* ===== Lista "Para quem é" ===== */
+.audience {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.audience li {
+    padding: 10px 18px;
+    font-weight: bold;
+    background-color: #13295c;
+    border: 2px solid #2a4a8f;
+    border-radius: 30px;
+}
+
+
+/* ===== Status das antenas ===== */
+.status {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.status-coming {
+    color: #061230;
+    background-color: #ffc72c;
+}
+
+.status-arrived {
+    color: #061230;
+    background-color: #4ade80;
+}
+
+.status-left {
+    color: #061230;
+    background-color: #8fcbff;
+}
+
+.status-none {
+    color: #f4f7ff;
+    background-color: #33415f;
+}
+
+.status-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.status-list li {
+    flex: 1 1 220px;
+    padding: 20px;
+    background-color: #13295c;
+    border-radius: 16px;
+}
+
+.status-list p {
+    color: #c3cde6;
+}
+
+
+/* ===== Páginas com formulário ===== */
+.page {
+    padding: 48px 0 72px;
+}
+
+.page h1 {
+    font-size: 41px;
+}
+
+/* Formulário de um lado e painel do outro */
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.form-grid>form,
+.form-grid>div {
+    flex: 2 1 400px;
+}
+
+.form-grid>aside {
+    flex: 1 1 280px;
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    /* itens um embaixo do outro, ocupando a largura toda */
+    padding: 32px;
+    background-color: #0b1d47;
+    border: 2px solid #2a4a8f;
+    border-radius: 24px;
+}
+
+/* Cada campo do formulário */
+/* Em coluna: o nome em cima e a caixa de texto embaixo, ocupando a largura toda */
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.hint {
+    display: block;
+    margin-top: 6px;
+    font-size: 15px;
+    color: #c3cde6;
+}
+
+/* Caixas de texto e listas de seleção */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+    padding: 16px;
+    font-family: inherit;
+    font-size: 18px;
+    color: #f4f7ff;
+    background-color: #061230;
+    border: 2px solid #2a4a8f;
+    border-radius: 12px;
+}
+
+/* Grupo de opções (radio e checkbox) */
+fieldset {
+    margin: 0 0 24px;
+    padding: 0;
+    border: none;
+}
+
+legend {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Cada opção é uma caixa grande, fácil de clicar */
+.option {
+    flex: 1 1 220px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: #061230;
+    border: 2px solid #2a4a8f;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* Opções uma embaixo da outra */
+.options-single {
+    flex-direction: column;
+}
+
+.options-single .option {
+    flex: none;
+}
+
+.option:hover {
+    border-color: #8fcbff;
+}
+
+.option input {
+    width: 22px;
+    height: 22px;
+    accent-color: #ffc72c;
+}
+
+
+/* ===== Painel lateral ===== */
+.panel {
+    display: flex;
+    flex-direction: column;
+    /* itens um embaixo do outro, ocupando a largura toda */
+    padding: 28px;
+    background-color: #13295c;
+    border: 2px solid #2a4a8f;
+    border-radius: 24px;
+}
+
+.panel h2 {
+    font-size: 23px;
+}
+
+/* Lista de dados: nome à esquerda, valor à direita */
+.details-list {
+    margin: 0;
+}
+
+.details-list div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #2a4a8f;
+}
+
+.details-list dt {
+    color: #c3cde6;
+}
+
+.details-list dd {
+    margin: 0;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Caixa de observação */
+.note {
+    margin-top: 20px;
+    padding: 16px;
+    font-size: 16px;
+    background-color: #061230;
+    border-left: 6px solid #8fcbff;
+    border-radius: 12px;
+}
+
+
+/* ===== Mensagens (criadas pelo JavaScript) ===== */
+.message {
+    margin: 24px 0;
+    padding: 16px 20px;
+    text-align: left;
+    background-color: #061230;
+    border-radius: 12px;
+}
+
+.message p {
+    margin: 0;
+}
+
+.message-error {
+    border-left: 6px solid #ff5a5f;
+}
+
+.message-success {
+    border-left: 6px solid #4ade80;
+}
+
+
+/* ===== Página de confirmação ===== */
+.success {
+    max-width: 720px;
+    text-align: center;
+}
+
+.success .panel {
+    margin: 32px 0;
+    text-align: left;
+}
+
+/* Círculo verde com o "✓" */
+.success-icon {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 24px;
+    font-size: 54px;
+    line-height: 96px;
+    color: #061230;
+    background-color: #4ade80;
+    border-radius: 48px;
+    /* metade do tamanho = círculo */
+}
+
+/* Lista dos pontos do ônibus */
+.route {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.route li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 0 14px 16px;
+    border-left: 4px solid #2a4a8f;
+}
+
+/* Ponto onde a pessoa vai embarcar */
+.route li.current {
+    border-left-color: #ffc72c;
+}
+
+.arrival-alert {
+    margin: 16px 0;
+    font-weight: bold;
+    color: #ffc72c;
+}
+
+/* Botão "Cancelar solicitação" que abre a confirmação */
+.cancel-box {
+    margin-top: 24px;
+    text-align: left;
+}
+
+.cancel-box summary {
+    padding: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid #ff5a5f;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.cancel-box .panel {
+    margin-top: 16px;
+    border-color: #ff5a5f;
+}
+
+
+/* ===== Painel do motorista ===== */
+.notification {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding: 20px;
+    background-color: #13295c;
+    border: 2px solid #2a4a8f;
+    border-left: 8px solid #ffc72c;
+    border-radius: 16px;
+}
+
+/* Avisos antigos (cancelado ou concluído) */
+.notification.past {
+    border-left-color: #2a4a8f;
+}
+
+.notification h3 {
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+
+.notification p {
+    margin: 0;
+    color: #c3cde6;
+}
+
+/* Quadrado com "!", "✕" ou "✓" */
+.badge {
+    width: 52px;
+    height: 52px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 52px;
+    text-align: center;
+    color: #061230;
+    background-color: #ffc72c;
+    border-radius: 14px;
+}
+
+.notification.past .badge {
+    color: #f4f7ff;
+    background-color: #2a4a8f;
+}
+
+
+/* ===== Rodapé ===== */
+.site-footer {
+    padding: 40px 0;
+    background-color: #0b1d47;
+    border-top: 3px solid #ffc72c;
+}
+
+.site-footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.site-footer p {
+    margin: 0 0 6px;
+    font-size: 16px;
+    color: #c3cde6;
+}
+
+
+/* ===== Tamanho do texto (botões A+ e A-) =====
+   O zoom aumenta a página inteira: textos, botões e espaços */
+.font-medium body {
+    zoom: 1.15;
+}
+
+.font-large body {
+    zoom: 1.3;
+}
+
+
+/* ===== Alto contraste =====
+   Fundo preto, texto branco, bordas brancas e destaques em amarelo forte */
+.high-contrast body,
+.high-contrast .site-header,
+.high-contrast .site-footer,
+.high-contrast .section-alt,
+.high-contrast .card,
+.high-contrast .panel,
+.high-contrast .form-card,
+.high-contrast .option,
+.high-contrast .demo,
+.high-contrast .demo-alert,
+.high-contrast .note,
+.high-contrast .message,
+.high-contrast .notification,
+.high-contrast .seat,
+.high-contrast .audience li,
+.high-contrast .status-list li,
+.high-contrast input,
+.high-contrast select,
+.high-contrast .accessibility-bar button {
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #ffffff;
+}
+
+.high-contrast .text-muted,
+.high-contrast .subtitle,
+.high-contrast .hint,
+.high-contrast .required-note,
+.high-contrast .details-list dt,
+.high-contrast .notification p,
+.high-contrast .status-list p,
+.high-contrast .site-footer p,
+.high-contrast .accessibility-title {
+    color: #ffffff;
+}
+
+.high-contrast a,
+.high-contrast .logo,
+.high-contrast .menu a,
+.high-contrast .hero h1 span,
+.high-contrast .arrival-alert {
+    color: #ffff00;
+}
+
+.high-contrast .button-primary,
+.high-contrast .menu a.active,
+.high-contrast .step-number,
+.high-contrast .tag,
+.high-contrast .step-badge,
+.high-contrast .badge,
+.high-contrast .seat-lit,
+.high-contrast .status,
+.high-contrast .accessibility-bar button.on {
+    color: #000000;
+    background-color: #ffff00;
+    border-color: #ffff00;
+}
+
+.high-contrast .button-secondary {
+    color: #ffff00;
+    border-color: #ffff00;
+}
+
+.high-contrast .site-header,
+.high-contrast .section-title,
+.high-contrast .route li.current {
+    border-color: #ffff00;
+}
+
+
+/* ===== Celular ===== */
+@media (max-width: 600px) {
+    body {
+        font-size: 17px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .site-header .container,
+    .menu {
+        justify-content: center;
+    }
+
+    .form-card,
+    .panel {
+        padding: 20px;
+    }
+
+    /* Botões um embaixo do outro, ocupando a largura toda */
+    .buttons {
+        flex-direction: column;
+    }
+}
