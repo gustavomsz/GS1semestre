@@ -17,9 +17,9 @@
     <div class="topbar">
         <div class="container">
             <span class="topbar-title">Acessibilidade</span>
-            <button type="button" onclick="smallerText()" aria-label="Diminuir o tamanho do texto">A−</button>
-            <button type="button" onclick="biggerText()" aria-label="Aumentar o tamanho do texto">A+</button>
-            <button type="button" onclick="changeContrast()">Alto contraste</button>
+            <button onclick="smallerText()">A−</button>
+            <button onclick="biggerText()">A+</button>
+            <button onclick="changeContrast()">Alto contraste</button>
         </div>
     </div>
 
@@ -41,81 +41,81 @@
             <nav aria-label="Menu principal">
                 <ul class="menu">
                     <li><a href="../../index.html">Início</a></li>
-                    <li><a href="register.html" class="active" aria-current="page">Cadastro</a></li>
+                    <li><a href="register.html">Cadastro</a></li>
                     <li><a href="request.html">Solicitar</a></li>
                     <li><a href="driver.html">Motorista</a></li>
+                    <li><a href="src/pages/confirmation.html">Confirmacao</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main id="content">
-        <section class="page">
-            <div class="container">
-                <p class="step">Passo 1 de 3</p>
-                <h1>Criar cadastro</h1>
-                <p>Com o cadastro, o motorista sabe quem precisa de atendimento.</p>
+    <section class="page">
+        <div class="container">
+            <p class="step">Passo 1 de 3</p>
+            <h1>Criar cadastro</h1>
+            <p>Com o cadastro, o motorista sabe quem precisa de atendimento.</p>
 
-                <div class="row">
-                    <div class="form-box">
-                        <div id="message" aria-live="polite"></div>
+            <div class="row">
+                <div class="form-box">
+                    <div id="message" aria-live="polite"></div>
 
-                        <div class="field">
-                            <label for="name">Nome completo</label>
-                            <input type="text" id="name" autocomplete="name">
-                        </div>
-
-                        <div class="field">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" autocomplete="email">
-                        </div>
-
-                        <div class="field">
-                            <label for="phone">Celular</label>
-                            <input type="tel" id="phone" autocomplete="tel" placeholder="(11) 90000-0000">
-                        </div>
-
-                        <div class="field">
-                            <label for="password">Senha</label>
-                            <input type="password" id="password" autocomplete="new-password">
-                            <span class="hint">Use pelo menos 8 caracteres.</span>
-                        </div>
-
-                        <div class="field">
-                            <label for="type">Tipo de atendimento</label>
-                            <select id="type">
-                                <option value="">Escolha uma opção</option>
-                                <option value="FISICA">Deficiência física</option>
-                                <option value="VISUAL">Deficiência visual</option>
-                                <option value="AUDITIVA">Deficiência auditiva</option>
-                                <option value="IDOSO">Idoso</option>
-                                <option value="MOBILIDADE REDUZIDA">Mobilidade reduzida</option>
-                                <option value="GESTANTE">Gestante</option>
-                                <option value="AUTISTA">Autista</option>
-                            </select>
-                        </div>
-
-                        <label class="choice">
-                            <input type="checkbox" id="declaration">
-                            Declaro que tenho direito ao atendimento prioritário.
-                        </label>
-
-                        <button class="button yellow-button big-button" type="button" onclick="register()">Criar
-                            cadastro</button>
+                    <div class="field">
+                        <label for="name">Nome completo</label>
+                        <input id="name" autocomplete="name">
                     </div>
 
-                    <aside class="side-box">
-                        <h2>Por que pedimos esses dados?</h2>
-                        <p>O nome e o tipo de atendimento aparecem no aviso enviado ao motorista, para que ele se
-                            prepare antes de chegar ao ponto.</p>
-                        <div class="tip">
-                            O Prioriza não pede laudo nem comprovante. O tipo de atendimento é informado por você.
-                        </div>
-                    </aside>
+                    <div class="field">
+                        <label for="email">E-mail</label>
+                        <input id="email" autocomplete="email">
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Celular</label>
+                        <input id="phone" autocomplete="tel" placeholder="(11) 90000-0000">
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Senha</label>
+                        <input id="password" autocomplete="new-password">
+                        <span class="hint">Use pelo menos 8 caracteres.</span>
+                    </div>
+
+                    <div class="field">
+                        <label for="type">Tipo de atendimento</label>
+                        <select id="type">
+                            <option value="">Escolha uma opção</option>
+                            <option value="FISICA">Deficiência física</option>
+                            <option value="VISUAL">Deficiência visual</option>
+                            <option value="AUDITIVA">Deficiência auditiva</option>
+                            <option value="IDOSO">Idoso</option>
+                            <option value="MOBILIDADE REDUZIDA">Mobilidade reduzida</option>
+                            <option value="GESTANTE">Gestante</option>
+                            <option value="AUTISTA">Autista</option>
+                        </select>
+                    </div>
+
+                    <div class="choice">
+                        <input id="declaration">
+                        Declaro que tenho direito ao atendimento prioritário.
+                    </div>
+
+                    <button class="button yellow-button big-button" onclick="register()">Criar
+                        cadastro</button>
+                </div>
+
+                <div class="side-box">
+                    <h2>Por que pedimos esses dados?</h2>
+                    <p>O nome e o tipo de atendimento aparecem no aviso enviado ao motorista, para que ele se
+                        prepare antes de chegar ao ponto.</p>
+                    <div class="tip">
+                        O Prioriza não pede laudo nem comprovante. O tipo de atendimento é informado por você.
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
 
     <footer class="footer">
         <div class="container">

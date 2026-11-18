@@ -16,9 +16,9 @@
     <div class="topbar">
         <div class="container">
             <span class="topbar-title">Acessibilidade</span>
-            <button type="button" onclick="smallerText()" aria-label="Diminuir o tamanho do texto">A−</button>
-            <button type="button" onclick="biggerText()" aria-label="Aumentar o tamanho do texto">A+</button>
-            <button type="button" onclick="changeContrast()">Alto contraste</button>
+            <button onclick="smallerText()">A−</button>
+            <button onclick="biggerText()">A+</button>
+            <button onclick="changeContrast()">Alto contraste</button>
         </div>
     </div>
 
@@ -41,79 +41,72 @@
                 <ul class="menu">
                     <li><a href="../../index.html">Início</a></li>
                     <li><a href="register.html">Cadastro</a></li>
-                    <li><a href="request.html" class="active" aria-current="page">Solicitar</a></li>
+                    <li><a href="request.html">Solicitar</a></li>
                     <li><a href="driver.html">Motorista</a></li>
+                    <li><a href="src/pages/confirmation.html">Confirmacao</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <section class="page">
+        <div class="container">
+            <p class="step">Passo 2 de 3</p>
+            <h1>Solicitar atendimento</h1>
+            <p>Faça a solicitação antes de o ônibus chegar ao seu ponto.</p>
+            <div class="row">
+                <div class="form-box">
+                    <div id="message" aria-live="polite"></div>
 
-    <main id="content">
-        <section class="page">
-            <div class="container">
-                <p class="step">Passo 2 de 3</p>
-                <h1>Solicitar atendimento</h1>
-                <p>Faça a solicitação antes de o ônibus chegar ao seu ponto.</p>
-
-                <div class="row">
-                    <div class="form-box">
-                        <div id="message" aria-live="polite"></div>
-
-                        <div class="field">
-                            <label for="line-select">Linha de ônibus</label>
-                            <select id="line-select">
-                                <option value="2002-10">Linha 2002-10</option>
-                            </select>
-                        </div>
-
-                        <div class="field">
-                            <label for="stop">Ponto de embarque</label>
-                            <select id="stop">
-                                <option value="">Escolha o ponto</option>
-                                <option value="Terminal Pq. D. Pedro II">Terminal Pq. D. Pedro II</option>
-                                <option value="Lgo. Pateo do Colégio">Lgo. Pateo do Colégio</option>
-                                <option value="R. Boa Vista, 364">R. Boa Vista, 364</option>
-                            </select>
-                        </div>
-
-                        <div class="field">
-                            <label for="seats">Quantos assentos?</label>
-                            <span class="hint">Escolha 2 se estiver com acompanhante.</span>
-                            <select id="seats">
-                                <option value="1">1 assento</option>
-                                <option value="2">2 assentos</option>
-                            </select>
-                        </div>
-
-                        <button class="button yellow-button big-button" type="button"
-                            onclick="requestService()">Solicitar atendimento prioritário</button>
+                    <div class="field">
+                        <label for="line-select">Linha de ônibus</label>
+                        <select id="line-select">
+                            <option value="2002-10">Linha 2002-10</option>
+                        </select>
                     </div>
-
-                    <aside class="side-box">
-                        <h2>Ônibus 971-m · Linha 2002-10</h2>
-                        <dl class="info">
-                            <div>
-                                <dt>Passageiro</dt>
-                                <dd id="current-passenger">Sem cadastro</dd>
-                            </div>
-                            <div>
-                                <dt>Assentos livres</dt>
-                                <dd id="free-seats">3 de 3</dd>
-                            </div>
-                        </dl>
-                        <div class="seats">
-                            <div class="seat" id="seat1">Livre</div>
-                            <div class="seat" id="seat2">Livre</div>
-                            <div class="seat" id="seat3">Livre</div>
+                    <div class="field">
+                        <label for="stop">Ponto de embarque</label>
+                        <select id="stop">
+                            <option value="">Escolha o ponto</option>
+                            <option value="Terminal Pq. D. Pedro II">Terminal Pq. D. Pedro II</option>
+                            <option value="Lgo. Pateo do Colégio">Lgo. Pateo do Colégio</option>
+                            <option value="R. Boa Vista, 364">R. Boa Vista, 364</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="seats">Quantos assentos?</label>
+                        <span class="hint">Escolha 2 se estiver com acompanhante.</span>
+                        <select id="seats">
+                            <option value="1">1 assento</option>
+                            <option value="2">2 assentos</option>
+                        </select>
+                    </div>
+                    <button class="button yellow-button big-button" onclick="requestService()">Solicitar atendimento
+                        prioritário</button>
+                </div>
+                <div class="side-box">
+                    <h2>Ônibus 971-m · Linha 2002-10</h2>
+                    <dl class="info">
+                        <div>
+                            <dt>Passageiro</dt>
+                            <dd id="current-passenger">Sem cadastro</dd>
                         </div>
-                        <div class="tip">
-                            Precisa de atendimento em outra viagem? Faça uma nova solicitação.
+                        <div>
+                            <dt>Assentos livres</dt>
+                            <dd id="free-seats">3 de 3</dd>
                         </div>
-                    </aside>
+                    </dl>
+                    <div class="seats">
+                        <div class="seat" id="seat1">Livre</div>
+                        <div class="seat" id="seat2">Livre</div>
+                        <div class="seat" id="seat3">Livre</div>
+                    </div>
+                    <div class="tip">
+                        Precisa de atendimento em outra viagem? Faça uma nova solicitação.
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">

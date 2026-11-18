@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prioriza - Mobilidade sem barreiras</title>
+    <title>Prioriza</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
@@ -16,9 +16,9 @@
     <div class="topbar">
         <div class="container">
             <span class="topbar-title">Acessibilidade</span>
-            <button type="button" onclick="smallerText()" aria-label="Diminuir o tamanho do texto">A−</button>
-            <button type="button" onclick="biggerText()" aria-label="Aumentar o tamanho do texto">A+</button>
-            <button type="button" onclick="changeContrast()">Alto contraste</button>
+            <button onclick="smallerText()">A−</button>
+            <button onclick="biggerText()">A+</button>
+            <button onclick="changeContrast()">Alto contraste</button>
         </div>
     </div>
 
@@ -37,18 +37,18 @@
                 </svg>
                 PRIORIZA
             </a>
-            <nav aria-label="Menu principal">
+            <nav aria-label="Menu-principal">
                 <ul class="menu">
-                    <li><a href="index.html" class="active" aria-current="page">Início</a></li>
+                    <li><a href="index.html">Início</a></li>
                     <li><a href="src/pages/register.html">Cadastro</a></li>
                     <li><a href="src/pages/request.html">Solicitar</a></li>
                     <li><a href="src/pages/driver.html">Motorista</a></li>
+                    <li><a href="src/pages/confirmation.html">Confirmacao</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main id="content">
         <section class="intro">
             <div class="container">
                 <div>
@@ -169,7 +169,6 @@
                 </ul>
             </div>
         </section>
-    </main>
 
     <footer class="footer">
         <div class="container">

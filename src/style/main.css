@@ -45,7 +45,7 @@ h3 {
     margin-right: auto;
     font-size: 15px;
     font-weight: bold;
-    color: #c3cde6;
+    color: #ffffff;
 }
 
 .topbar button {
@@ -59,10 +59,10 @@ h3 {
     background-color: #13295c;
     border: 2px solid #2a4a8f;
     border-radius: 10px;
-    cursor: pointer;
     transition: .2s ease;
 }
-.topbar button:hover{
+
+.topbar button:hover {
     border: 2px solid gold;
 }
 
@@ -659,38 +659,6 @@ body.contrast,
     color: #ffffff;
     background-color: #000000;
     border-color: #ffffff;
-}
-
-.contrast .seats-text,
-.contrast .subtitle,
-.contrast .hint,
-.contrast .info dt,
-.contrast .notice p,
-.contrast .status-cards p,
-.contrast .footer p,
-.contrast .topbar-title {
-    color: #ffffff;
-}
-
-.contrast a,
-.contrast .logo,
-.contrast .menu a,
-.contrast .intro h1 span,
-.contrast .alert-text {
-    color: #ffff00;
-}
-
-.contrast .yellow-button,
-.contrast .menu a.active,
-.contrast .number,
-.contrast .tag,
-.contrast .step,
-.contrast .icon,
-.contrast .seat-on,
-.contrast .status {
-    color: #000000;
-    background-color: #ffff00;
-    border-color: #ffff00;
 }
 
 .contrast .border-button {

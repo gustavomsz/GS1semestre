@@ -2,16 +2,6 @@
 
 Site do Prioriza: o passageiro com direito a atendimento prioritário avisa o motorista antes de o ônibus chegar ao ponto, e o assento preferencial é sinalizado com um LED.
 
-## Time 404
-
-| Integrante | RM |
-|---|---|
-| Giovanna Ciola | 575631 |
-| Nathaly Vieira Barbosa | 575407 |
-| Marina Lobato Soares | 575475 |
-| Jamil de Jesus Chaluppe Filho | 575697 |
-| Gustavo Moreira Souza | 576147 |
-
 ## Páginas
 
 | Página | O que faz | Escopo |
@@ -82,3 +72,13 @@ O Prioriza é feito para pessoas com deficiência de qualquer tipo.
 - O tipo de atendimento é informado pelo próprio passageiro. O sistema não verifica a condição.
 - O VLibras precisa de internet para carregar.
 - O Prioriza auxilia na comunicação, mas não substitui a ajuda humana.
+
+## Time 404
+
+| Integrante | RM |
+|---|---|
+| Giovanna Ciola | 575631 |
+| Nathaly Vieira Barbosa | 575407 |
+| Marina Lobato Soares | 575475 |
+| Jamil de Jesus Chaluppe Filho | 575697 |
+| Gustavo Moreira Souza | 576147 |

@@ -17,9 +17,9 @@
     <div class="topbar">
         <div class="container">
             <span class="topbar-title">Acessibilidade</span>
-            <button type="button" onclick="smallerText()" aria-label="Diminuir o tamanho do texto">A−</button>
-            <button type="button" onclick="biggerText()" aria-label="Aumentar o tamanho do texto">A+</button>
-            <button type="button" onclick="changeContrast()">Alto contraste</button>
+            <button onclick="smallerText()">A−</button>
+            <button onclick="biggerText()">A+</button>
+            <button onclick="changeContrast()">Alto contraste</button>
         </div>
     </div>
 
@@ -43,55 +43,52 @@
                     <li><a href="../../index.html">Início</a></li>
                     <li><a href="register.html">Cadastro</a></li>
                     <li><a href="request.html">Solicitar</a></li>
-                    <li><a href="driver.html" class="active" aria-current="page">Motorista</a></li>
+                    <li><a href="driver.html">Motorista</a></li>
+                    <li><a href="src/pages/confirmation.html">Confirmacao</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <section class="page">
+        <div class="container">
+            <h1>Painel do motorista</h1>
+            <p>Ônibus 971-m · Linha 2002-10 · avisos de atendimento prioritário</p>
 
-    <main id="content">
-        <section class="page">
-            <div class="container">
-                <h1>Painel do motorista</h1>
-                <p>Ônibus 971-m · Linha 2002-10 · avisos de atendimento prioritário</p>
-
-                <div class="row">
-                    <div>
-                        <h2>Último aviso</h2>
-                        <div class="notice">
-                            <span class="icon" aria-hidden="true">!</span>
-                            <div>
-                                <h3>Aviso do Prioriza</h3>
-                                <p id="driver-alert">Nenhum aviso no momento.</p>
-                            </div>
+            <div class="row">
+                <div>
+                    <h2>Último aviso</h2>
+                    <div class="notice">
+                        <span class="icon" aria-hidden="true">!</span>
+                        <div>
+                            <h3>Aviso do Prioriza</h3>
+                            <p id="driver-alert">Nenhum aviso no momento.</p>
                         </div>
                     </div>
+                </div>
 
-                    <aside class="side-box">
-                        <h2>Assentos preferenciais</h2>
-                        <div class="seats">
-                            <div class="seat" id="seat1">Livre</div>
-                            <div class="seat" id="seat2">Livre</div>
-                            <div class="seat" id="seat3">Livre</div>
+                <div class="side-box">
+                    <h2>Assentos preferenciais</h2>
+                    <div class="seats">
+                        <div class="seat" id="seat1">Livre</div>
+                        <div class="seat" id="seat2">Livre</div>
+                        <div class="seat" id="seat3">Livre</div>
+                    </div>
+                    <dl class="info">
+                        <div>
+                            <dt>Reservados</dt>
+                            <dd id="reserved-seats">0 de 3</dd>
                         </div>
-                        <dl class="info">
-                            <div>
-                                <dt>Reservados</dt>
-                                <dd id="reserved-seats">0 de 3</dd>
-                            </div>
-                            <div>
-                                <dt>LED</dt>
-                                <dd id="driver-led">APAGADO</dd>
-                            </div>
-                        </dl>
-                        <button class="button border-button big-button" type="button" onclick="resetDemo()">Limpar dados
-                            da demonstração</button>
-                    </aside>
+                        <div>
+                            <dt>LED</dt>
+                            <dd id="driver-led">APAGADO</dd>
+                        </div>
+                    </dl>
+                    <button class="button border-button big-button" onclick="resetDemo()">Limpar dados
+                        da demonstração</button>
                 </div>
             </div>
-        </section>
-    </main>
-
+        </div>
+    </section>
     <footer class="footer">
         <div class="container">
             <div>
