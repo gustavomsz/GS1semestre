@@ -151,10 +151,3 @@ const rota1 = new Rota("2002-10");
 rota1.adicionarParada(antena1);
 rota1.adicionarParada(antena2);
 rota1.adicionarParada(antena3);
-
-console.log("Paradas da linha " + rota1.numeroLinha + ":");
-for (let i = 0; i < rota1.antenas.length; i++) {
-    console.log("  " + i + " - " + rota1.antenas[i].ponto);
-}
-
-rota1.simularViagem(onibus1);

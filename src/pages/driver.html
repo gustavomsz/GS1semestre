@@ -12,14 +12,15 @@
     <link rel="stylesheet" href="../style/main.css">
 </head>
 
-<body onload="showDriverPage()">
+<body onload="mostraPaginaMotorista()">
+    <a class="skip-link" href="#content">Pular para o conteúdo</a>
 
     <div class="topbar">
         <div class="container">
             <span class="topbar-title">Acessibilidade</span>
-            <button onclick="smallerText()">A−</button>
-            <button onclick="biggerText()">A+</button>
-            <button onclick="changeContrast()">Alto contraste</button>
+            <button onclick="diminuirTexto()" aria-label="Diminuir o tamanho do texto">A−</button>
+            <button onclick="aumentarTexto()" aria-label="Aumentar o tamanho do texto">A+</button>
+            <button onclick="alternarContraste()">Alto contraste</button>
         </div>
     </div>
 
@@ -44,51 +45,55 @@
                     <li><a href="register.html">Cadastro</a></li>
                     <li><a href="request.html">Solicitar</a></li>
                     <li><a href="driver.html">Motorista</a></li>
-                    <li><a href="src/pages/confirmation.html">Confirmacao</a></li>
+                    <li><a href="confirmation.html">Confirmacao</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="page">
-        <div class="container">
-            <h1>Painel do motorista</h1>
-            <p>Ônibus 971-m · Linha 2002-10 · avisos de atendimento prioritário</p>
 
-            <div class="row">
-                <div>
-                    <h2>Último aviso</h2>
-                    <div class="notice">
-                        <span class="icon" aria-hidden="true">!</span>
-                        <div>
-                            <h3>Aviso do Prioriza</h3>
-                            <p id="driver-alert">Nenhum aviso no momento.</p>
+    <main id="content" tabindex="-1">
+        <section class="page">
+            <div class="container">
+                <h1>Painel do motorista</h1>
+                <p>Ônibus 971-m · Linha 2002-10 · avisos de atendimento prioritário</p>
+
+                <div class="row">
+                    <div>
+                        <h2>Último aviso</h2>
+                        <div class="notice">
+                            <span class="icon" aria-hidden="true">!</span>
+                            <div>
+                                <h3>Aviso do Prioriza</h3>
+                                <p id="driver-alert">Nenhum aviso no momento.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="side-box">
-                    <h2>Assentos preferenciais</h2>
-                    <div class="seats">
-                        <div class="seat" id="seat1">Livre</div>
-                        <div class="seat" id="seat2">Livre</div>
-                        <div class="seat" id="seat3">Livre</div>
-                    </div>
-                    <dl class="info">
-                        <div>
-                            <dt>Reservados</dt>
-                            <dd id="reserved-seats">0 de 3</dd>
+                    <aside class="side-box">
+                        <h2>Assentos preferenciais</h2>
+                        <div class="seats">
+                            <div class="seat" id="seat1">Livre</div>
+                            <div class="seat" id="seat2">Livre</div>
+                            <div class="seat" id="seat3">Livre</div>
                         </div>
-                        <div>
-                            <dt>LED</dt>
-                            <dd id="driver-led">APAGADO</dd>
-                        </div>
-                    </dl>
-                    <button class="button border-button big-button" onclick="resetDemo()">Limpar dados
-                        da demonstração</button>
+                        <dl class="info">
+                            <div>
+                                <dt>Reservados</dt>
+                                <dd id="reserved-seats">0 de 3</dd>
+                            </div>
+                            <div>
+                                <dt>LED</dt>
+                                <dd id="driver-led">APAGADO</dd>
+                            </div>
+                        </dl>
+                        <button class="button border-button big-button" type="button" onclick="reiniciarDemonstracao()">Limpar dados
+                            da demonstração</button>
+                    </aside>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div>
@@ -99,10 +104,11 @@
         </div>
     </footer>
 
-    <script src="../script/accessibility.js"></script>
-    <script src="../script/interface.js"></script>
-    <script src="../script/main.js"></script>
+    <script src="../js/prioriza.js"></script>
+    <script src="../js/interface.js"></script>
+    <script src="../js/accessibility.js"></script>
 
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </body>
 
 </html>

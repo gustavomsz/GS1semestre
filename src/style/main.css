@@ -28,6 +28,31 @@ h3 {
     padding: 0 16px;
 }
 
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+summary:focus {
+    outline: 3px solid #ffc72c;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 100;
+    padding: 12px 20px;
+    font-weight: bold;
+    color: #061230;
+    background-color: #ffc72c;
+    border-radius: 10px;
+}
+
+.skip-link:focus {
+    top: 16px;
+}
+
+
 .topbar {
     background-color: #000000;
 }
@@ -45,7 +70,7 @@ h3 {
     margin-right: auto;
     font-size: 15px;
     font-weight: bold;
-    color: #ffffff;
+    color: #c3cde6;
 }
 
 .topbar button {
@@ -59,11 +84,7 @@ h3 {
     background-color: #13295c;
     border: 2px solid #2a4a8f;
     border-radius: 10px;
-    transition: .2s ease;
-}
-
-.topbar button:hover {
-    border: 2px solid gold;
+    cursor: pointer;
 }
 
 .header {
@@ -106,14 +127,18 @@ h3 {
     padding: 12px 14px;
     color: #f4f7ff;
     text-decoration: none;
+    font-weight: bold;
     border-radius: 10px;
-    transition: .5s ease;
 }
 
 .menu a:hover {
     background-color: #13295c;
 }
 
+.menu a.active {
+    color: #061230;
+    background-color: #ffc72c;
+}
 
 .button {
     display: inline-block;
@@ -174,6 +199,11 @@ h3 {
     border-radius: 20px;
 }
 
+.small {
+    font-weight: normal;
+    font-size: 15px;
+    color: #c3cde6;
+}
 
 .section {
     padding: 64px 0;
@@ -661,6 +691,41 @@ body.contrast,
     border-color: #ffffff;
 }
 
+.contrast .seats-text,
+.contrast .subtitle,
+.contrast .hint,
+.contrast .small,
+.contrast .info dt,
+.contrast .notice p,
+.contrast .status-cards p,
+.contrast .footer p,
+.contrast .topbar-title {
+    color: #ffffff;
+}
+
+.contrast a,
+.contrast .logo,
+.contrast .menu a,
+.contrast .intro h1 span,
+.contrast .alert-text,
+.contrast .example-alert strong {
+    color: #ffff00;
+}
+
+.contrast .yellow-button,
+.contrast .skip-link,
+.contrast .menu a.active,
+.contrast .number,
+.contrast .tag,
+.contrast .step,
+.contrast .icon,
+.contrast .seat-on,
+.contrast .status {
+    color: #000000;
+    background-color: #ffff00;
+    border-color: #ffff00;
+}
+
 .contrast .border-button {
     color: #ffff00;
     border-color: #ffff00;
@@ -670,4 +735,18 @@ body.contrast,
 .contrast .title,
 .contrast .stops li.here {
     border-color: #ffff00;
+}
+
+@media (max-width: 600px) {
+    .intro h1 {
+        font-size: 38px;
+    }
+
+    .page h1 {
+        font-size: 32px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
 }

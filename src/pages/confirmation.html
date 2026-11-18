@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="../style/main.css">
 </head>
 
-<body onload="showConfirmationPage()">
+<body onload="mostraPaginaConfirmacao()">
+    <a class="skip-link" href="#content">Pular para o conteúdo</a>
     <div class="topbar">
         <div class="container">
             <span class="topbar-title">Acessibilidade</span>
-            <button onclick="smallerText()">A−</button>
-            <button onclick="biggerText()">A+</button>
-            <button onclick="changeContrast()">Alto contraste</button>
+            <button onclick="diminuirTexto()" aria-label="Diminuir o tamanho do texto">A−</button>
+            <button onclick="aumentarTexto()" aria-label="Aumentar o tamanho do texto">A+</button>
+            <button onclick="alternarContraste()">Alto contraste</button>
         </div>
     </div>
 
@@ -43,86 +44,90 @@
                     <li><a href="register.html">Cadastro</a></li>
                     <li><a href="request.html">Solicitar</a></li>
                     <li><a href="driver.html">Motorista</a></li>
-                    <li><a href="src/pages/confirmation.html">Confirmacao</a></li>
+                    <li><a href="confirmation.html">Confirmacao</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="page">
-        <div class="container done">
-            <div id="active-request">
-                <div class="done-icon">&#10003;</div>
-                <p class="step">Passo 3 de 3</p>
-                <h1>Solicitação enviada com sucesso!</h1>
-                <p>Seu pedido já foi informado ao motorista.</p>
-                <p class="msg msg-green" id="driver-message"></p>
 
-                <div class="side-box">
-                    <h2>Sua solicitação</h2>
-                    <dl class="info">
-                        <div>
-                            <dt>Linha</dt>
-                            <dd id="line"></dd>
-                        </div>
-                        <div>
-                            <dt>Ônibus</dt>
-                            <dd id="bus"></dd>
-                        </div>
-                        <div>
-                            <dt>Ponto de embarque</dt>
-                            <dd id="summary-stop"></dd>
-                        </div>
-                        <div>
-                            <dt>Assentos</dt>
-                            <dd id="summary-seats"></dd>
-                        </div>
-                        <div>
-                            <dt>LED do assento</dt>
-                            <dd id="summary-led"></dd>
-                        </div>
-                    </dl>
-                </div>
+    <main id="content" tabindex="-1">
+        <section class="page">
+            <div class="container done">
+                <div id="active-request">
+                    <div class="done-icon" aria-hidden="true">&#10003;</div>
+                    <p class="step">Passo 3 de 3</p>
+                    <h1>Solicitação enviada com sucesso!</h1>
+                    <p>Seu pedido já foi informado ao motorista.</p>
+                    <p class="msg msg-green" id="driver-message"></p>
 
-                <div class="side-box">
-                    <h2>Onde está o ônibus</h2>
-                    <ul class="stops">
-                        <li id="stop-item1"><span id="stop1">Terminal Pq. D. Pedro II</span> <span
-                                class="status status-gray" id="status1">SEM ÔNIBUS</span></li>
-                        <li id="stop-item2"><span id="stop2">Lgo. Pateo do Colégio</span> <span
-                                class="status status-gray" id="status2">SEM ÔNIBUS</span></li>
-                        <li id="stop-item3"><span id="stop3">R. Boa Vista, 364</span> <span class="status status-gray"
-                                id="status3">SEM ÔNIBUS</span></li>
-                    </ul>
-                    <p class="alert-text" id="arrival-alert" aria-live="polite"></p>
-                    <button class="button yellow-button big-button" id="move-button" onclick="moveBus()">Avançar
-                        ônibus</button>
-                </div>
-
-                <details class="cancel" id="cancel-box">
-                    <summary>Cancelar solicitação</summary>
                     <div class="side-box">
-                        <h2>Tem certeza?</h2>
-                        <p>O motorista será avisado de que você não precisa mais do atendimento.</p>
-                        <button class="button red-button big-button" onclick="cancelRequest()">Sim,
-                            cancelar solicitação</button>
+                        <h2>Sua solicitação</h2>
+                        <dl class="info">
+                            <div>
+                                <dt>Linha</dt>
+                                <dd id="line"></dd>
+                            </div>
+                            <div>
+                                <dt>Ônibus</dt>
+                                <dd id="bus"></dd>
+                            </div>
+                            <div>
+                                <dt>Ponto de embarque</dt>
+                                <dd id="summary-stop"></dd>
+                            </div>
+                            <div>
+                                <dt>Assentos</dt>
+                                <dd id="summary-seats"></dd>
+                            </div>
+                            <div>
+                                <dt>LED do assento</dt>
+                                <dd id="summary-led"></dd>
+                            </div>
+                        </dl>
                     </div>
-                </details>
-            </div>
 
-            <div id="cancelled" style="display: none">
-                <h1>Solicitação cancelada</h1>
-                <p class="msg msg-green" aria-live="polite">O cancelamento do agendamento foi realizado com sucesso.
-                </p>
-                <a class="button yellow-button" href="request.html">Fazer nova solicitação</a>
-            </div>
+                    <div class="side-box">
+                        <h2>Onde está o ônibus</h2>
+                        <ul class="stops">
+                            <li id="stop-item1"><span id="stop1">Terminal Pq. D. Pedro II</span> <span
+                                    class="status status-gray" id="status1">SEM ÔNIBUS</span></li>
+                            <li id="stop-item2"><span id="stop2">Lgo. Pateo do Colégio</span> <span
+                                    class="status status-gray" id="status2">SEM ÔNIBUS</span></li>
+                            <li id="stop-item3"><span id="stop3">R. Boa Vista, 364</span> <span
+                                    class="status status-gray" id="status3">SEM ÔNIBUS</span></li>
+                        </ul>
+                        <p class="alert-text" id="arrival-alert" aria-live="polite"></p>
+                        <button class="button yellow-button big-button" id="move-button"
+                            onclick="moverOnibus()">Avançar ônibus</button>
+                    </div>
 
-            <div id="no-request" style="display: none">
-                <h1>Nenhuma solicitação ativa</h1>
-                <p>Você ainda não pediu atendimento prioritário.</p>
-                <a class="button yellow-button" href="request.html">Solicitar atendimento</a>
+                    <details class="cancel" id="cancel-box">
+                        <summary>Cancelar solicitação</summary>
+                        <div class="side-box">
+                            <h2>Tem certeza?</h2>
+                            <p>O motorista será avisado de que você não precisa mais do atendimento.</p>
+                            <button class="button red-button big-button" onclick="cancelarSolicitacao()">Sim,
+                                cancelar solicitação</button>
+                        </div>
+                    </details>
+                </div>
+
+                <div id="cancelled" style="display: none">
+                    <h1>Solicitação cancelada</h1>
+                    <p class="msg msg-green" aria-live="polite">O cancelamento do agendamento foi realizado com sucesso.
+                    </p>
+                    <a class="button yellow-button" href="request.html">Fazer nova solicitação</a>
+                </div>
+
+                <div id="no-request" style="display: none">
+                    <h1>Nenhuma solicitação ativa</h1>
+                    <p>Você ainda não pediu atendimento prioritário.</p>
+                    <a class="button yellow-button" href="request.html">Solicitar atendimento</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div>
@@ -133,9 +138,10 @@
         </div>
     </footer>
 
-    <script src="../script/accessibility.js"></script>
-    <script src="../script/interface.js"></script>
-    <script src="../script/main.js"></script>
+    <script src="../js/prioriza.js"></script>
+    <script src="../js/interface.js"></script>
+    <script src="../js/accessibility.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prioriza</title>
+    <title>Prioriza - Mobilidade sem barreiras</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
@@ -13,12 +13,13 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#content">Pular para o conteúdo</a>
     <div class="topbar">
         <div class="container">
             <span class="topbar-title">Acessibilidade</span>
-            <button onclick="smallerText()">A−</button>
-            <button onclick="biggerText()">A+</button>
-            <button onclick="changeContrast()">Alto contraste</button>
+            <button onclick="diminuirTexto()" aria-label="Diminuir o tamanho do texto">A−</button>
+            <button onclick="aumentarTexto()" aria-label="Aumentar o tamanho do texto">A+</button>
+            <button onclick="alternarContraste()">Alto contraste</button>
         </div>
     </div>
 
@@ -37,18 +38,19 @@
                 </svg>
                 PRIORIZA
             </a>
-            <nav aria-label="Menu-principal">
+            <nav aria-label="Menu principal">
                 <ul class="menu">
                     <li><a href="index.html">Início</a></li>
                     <li><a href="src/pages/register.html">Cadastro</a></li>
                     <li><a href="src/pages/request.html">Solicitar</a></li>
                     <li><a href="src/pages/driver.html">Motorista</a></li>
-                    <li><a href="src/pages/confirmation.html">Confirmacao</a></li>
+                    <li><a href="src/pages/confirmation.html">onfirmacao</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <main id="content" tabindex="-1">
         <section class="intro">
             <div class="container">
                 <div>
@@ -113,7 +115,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section">
+        <section class="section section-blue">
             <div class="container">
                 <h2 class="title">Feito para todas as pessoas</h2>
                 <p>Use a barra de acessibilidade no topo de qualquer página.</p>
@@ -145,7 +147,7 @@
                 </ul>
             </div>
         </section>
-        <section class="section section-blue">
+        <section class="section">
             <div class="container">
                 <h2 class="title">Status no ponto de ônibus</h2>
                 <p>Antenas nos pontos informam onde o ônibus está.</p>
@@ -169,6 +171,7 @@
                 </ul>
             </div>
         </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -180,9 +183,10 @@
         </div>
     </footer>
 
-    <script src="src/script/accessibility.js"></script>
-    <script src="src/script/interface.js"></script>
-    <script src="src/script/main.js"></script>
+    <script src="src/js/prioriza.js"></script>
+    <script src="src/js/interface.js"></script>
+    <script src="src/js/accessibility.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </body>
 
 </html>
