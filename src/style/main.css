@@ -737,16 +737,6 @@ body.contrast,
     border-color: #ffff00;
 }
 
-@media (max-width: 600px) {
-    .intro h1 {
-        font-size: 38px;
-    }
-
-    .page h1 {
-        font-size: 32px;
-    }
-
-    .title {
-        font-size: 28px;
-    }
+.cancelation_request{
+    display: none;
 }

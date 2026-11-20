@@ -26,16 +26,7 @@
     <header class="header">
         <div class="container">
             <a class="logo" href="../../index.html">
-                <svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true">
-                    <path d="M24 2C13.5 2 5 10.3 5 20.6 5 34 24 46 24 46s19-12 19-25.4C43 10.3 34.5 2 24 2z"
-                        fill="#1e5bd8" />
-                    <rect x="14" y="10" width="20" height="21" rx="4" fill="#fff" />
-                    <rect x="17" y="13" width="14" height="8" rx="1.5" fill="#1e5bd8" />
-                    <circle cx="19" cy="26.5" r="1.8" fill="#1e5bd8" />
-                    <circle cx="29" cy="26.5" r="1.8" fill="#1e5bd8" />
-                    <path d="M5 30c9 7 30 6 38-7" stroke="#ffc72c" stroke-width="3.5" fill="none"
-                        stroke-linecap="round" />
-                </svg>
+                <img src="../assets/img/logo.svg" width="44" height="44">
                 PRIORIZA
             </a>
             <nav aria-label="Menu principal">
@@ -97,8 +88,8 @@
                                     class="status status-gray" id="status3">SEM ÔNIBUS</span></li>
                         </ul>
                         <p class="alert-text" id="arrival-alert" aria-live="polite"></p>
-                        <button class="button yellow-button big-button" id="move-button"
-                            onclick="moverOnibus()">Avançar ônibus</button>
+                        <button class="button yellow-button big-button" id="move-button" onclick="moverOnibus()">Avançar
+                            ônibus</button>
                     </div>
 
                     <details class="cancel" id="cancel-box">
@@ -112,14 +103,14 @@
                     </details>
                 </div>
 
-                <div id="cancelled" style="display: none">
+                <div class="cancelation_request" id="cancelled">
                     <h1>Solicitação cancelada</h1>
                     <p class="msg msg-green" aria-live="polite">O cancelamento do agendamento foi realizado com sucesso.
                     </p>
                     <a class="button yellow-button" href="request.html">Fazer nova solicitação</a>
                 </div>
 
-                <div id="no-request" style="display: none">
+                <div class="cancelation_request" id="no-request">
                     <h1>Nenhuma solicitação ativa</h1>
                     <p>Você ainda não pediu atendimento prioritário.</p>
                     <a class="button yellow-button" href="request.html">Solicitar atendimento</a>
