@@ -1,6 +1,19 @@
 # PRIORIZA
 
-Site do Prioriza: o passageiro com direito a atendimento prioritário avisa o motorista antes de o ônibus chegar ao ponto, e o assento preferencial é sinalizado com um LED.
+## Ficha da CitizenTech
+
+| Campo | Resposta |
+|---|---|
+| Nome da CitizenTech | PRIORIZA - Mobilidade sem barreiras |
+| Cidade e bairro | São Paulo - Sé (Centro) |
+| Cidadão beneficiado | Pessoas com direito a atendimento prioritário: deficiência física, visual ou auditiva, idosos, mobilidade reduzida, gestantes e pessoas autistas |
+| Problema, em uma frase | O passageiro com prioridade não consegue avisar o motorista antes de o ônibus chegar e costuma encontrar o assento preferencial ocupado |
+| Como funciona | O passageiro faz o cadastro, escolhe a linha e o ponto, o motorista é avisado e o LED do assento preferencial acende. Antenas nos pontos informam onde o ônibus está |
+| O que cada parte faz | `prioriza.js`: lógica com as classes. `interface.js`: liga a lógica às telas. `accessibility.js`: zoom e alto contraste. Páginas HTML/CSS: telas do passageiro e do motorista |
+| Link do repositório |Site (JS): https://github.com/gustavomsz/GS1semestre · Python: https://github.com/natyqueiroz/GlobalSolution-python | |
+| Indicador de impacto | Número de passageiros com prioridade que embarcaram com o motorista avisado e o assento preferencial livre, por linha e por mês.|
+| ODS conectados | ODS 10 (Redução das desigualdades) e ODS 11 (Cidades e comunidades sustentáveis) |
+
 
 ## Páginas
 
@@ -15,23 +28,21 @@ Site do Prioriza: o passageiro com direito a atendimento prioritário avisa o mo
 ## Estrutura
 
 ```
-GS1semestre/
+prioriza-site/
+├── index.html
+├── README.md
 └── src/
-    ├── assets/
-    │   └── imgs/
-    ├── pages/
-    │   ├── confirmation.html
-    │   ├── driver.html
-    │   ├── register.html
-    │   └── request.html
-    ├── script/
-    │   ├── accessibility.js
+    ├── js/
+    │   ├── prioriza.js
     │   ├── interface.js
-    │   └── main.js
-    ├── style/
-    │   └── main.css
-    ├── index.html
-    └── README.md
+    │   └── accessibility.js
+    ├── pages/
+    │   ├── register.html
+    │   ├── request.html
+    │   ├── confirmation.html
+    │   └── driver.html
+    └── style/
+        └── main.css
 ```
 
 ## JavaScript
