@@ -101,6 +101,16 @@
                         <p>O motorista recebe o aviso e o LED do assento preferencial acende.</p>
                     </li>
                 </ol>
+                <div class="slideshow">
+                    <img id="foto" src="src/assets/img/slide1.svg"
+                        alt="O passageiro pede atendimento pelo celular antes de o ônibus chegar.">
+                    <span id="legenda" class="legenda" aria-live="polite">O passageiro pede atendimento pelo
+                        celular antes de o ônibus chegar.</span>
+                    <div class="botoes">
+                        <button type="button" onclick="voltarFoto()">Anterior</button>
+                        <button type="button" onclick="proximaFoto()">Próxima</button>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section" id="goals">
@@ -204,6 +214,7 @@
     <script src="src/js/prioriza.js"></script>
     <script src="src/js/interface.js"></script>
     <script src="src/js/accessibility.js"></script>
+    <script src="src/js/slideshow.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </body>
 

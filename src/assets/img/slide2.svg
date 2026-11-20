@@ -1,0 +1,19 @@
+<svg width="480" height="300" viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">
+    <rect width="480" height="300" fill="#dbe7f7" />
+    <rect x="0" y="240" width="480" height="60" fill="#2a3442" />
+    <rect x="60" y="110" width="360" height="130" rx="18" fill="#1e5bd8" />
+    <rect x="60" y="200" width="360" height="12" fill="#ffc72c" />
+    <rect x="80" y="128" width="60" height="50" rx="6" fill="#bfe0ff" />
+    <rect x="150" y="128" width="60" height="50" rx="6" fill="#bfe0ff" />
+    <rect x="220" y="128" width="60" height="50" rx="6" fill="#bfe0ff" />
+    <rect x="320" y="128" width="84" height="64" rx="6" fill="#bfe0ff" />
+    <circle cx="350" cy="152" r="9" fill="#e0b48a" />
+    <rect x="340" y="162" width="20" height="24" rx="5" fill="#0b2a5b" />
+    <circle cx="130" cy="242" r="20" fill="#121821" />
+    <circle cx="350" cy="242" r="20" fill="#121821" />
+    <rect x="200" y="22" width="230" height="70" rx="12" fill="#0f1a2b" />
+    <rect x="200" y="22" width="10" height="70" fill="#ffc72c" />
+    <text x="225" y="50" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffc72c">Aviso ao motorista</text>
+    <text x="225" y="76" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Ana · 1 assento</text>
+    <path d="M330 92 L350 110 L360 92 Z" fill="#0f1a2b" />
+</svg>
