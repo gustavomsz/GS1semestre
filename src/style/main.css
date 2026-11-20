@@ -768,3 +768,38 @@ body.contrast,
 .contrast .status-text {
     color: var(--cor-branco);
 }
+
+@media (max-width: 768px) {
+    .header nav {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .menu {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .menu a {
+        white-space: nowrap;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .title,
+    .page h1 {
+        font-size: 28px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .form-box,
+    .side-box {
+        min-width: 0;
+        padding: 20px;
+    }
+}
