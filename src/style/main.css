@@ -769,6 +769,56 @@ body.contrast,
     color: var(--cor-branco);
 }
 
+.slideshow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+    padding: 20px;
+    background-color: var(--cor-card);
+    border: 2px solid var(--cor-borda);
+    border-radius: 16px;
+}
+
+.slideshow img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 12px;
+}
+
+.legenda {
+    font-weight: bold;
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    gap: 12px;
+}
+
+.botoes button {
+    padding: 12px 20px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--cor-fundo);
+    background-color: var(--cor-destaque);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.contrast .slideshow {
+    background-color: var(--cor-preto);
+    border-color: var(--cor-branco);
+}
+
+.contrast .botoes button {
+    color: var(--cor-preto);
+    background-color: var(--cor-contraste);
+}
+
 @media (max-width: 768px) {
     .header nav {
         width: 100%;
