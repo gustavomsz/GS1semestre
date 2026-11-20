@@ -26,12 +26,17 @@
     <header class="header">
         <div class="container">
             <a class="logo" href="index.html">
-                <img src="src/assets/img/logo.svg" width="44" height="44">
+                <img src="src/assets/img/logo.svg" alt="Logo do Prioriza" width="44" height="44">
                 PRIORIZA
             </a>
             <nav aria-label="Menu principal">
                 <ul class="menu">
-                    <li><a href="index.html">Início</a></li>
+                    <li><a aria-current="page" class="active" href="index.html">Início</a></li>
+                    <li><a href="#problem">Problema</a></li>
+                    <li><a href="#tecno">Tecnologia</a></li>
+                    <li><a href="#goals">Objetivos</a></li>
+                    <li><a href="#audience">Público-alvo</a></li>
+                    <li><a href="#benefit">Benefícios</a></li>
                     <li><a href="src/pages/register.html">Cadastro</a></li>
                     <li><a href="src/pages/request.html">Solicitar</a></li>
                     <li><a href="src/pages/driver.html">Motorista</a></li>
@@ -47,7 +52,7 @@
                 <div>
                     <span class="tag">Transporte público acessível</span>
                     <h1>Mobilidade <span>sem barreiras.</span></h1>
-                    <p class="subtitle">Solicite atendimento prioritário antes de o ônibus chegar. O motorista é avisado
+                    <p id="goals" class="subtitle">Solicite atendimento prioritário antes de o ônibus chegar. O motorista é avisado
                         com antecedência e o assento preferencial é sinalizado para os outros passageiros.</p>
                     <div class="buttons">
                         <a class="button yellow-button" href="src/pages/request.html">Solicitar atendimento</a>
@@ -71,7 +76,7 @@
         </section>
         <section class="section section-blue">
             <div class="container">
-                <h2 class="title">Como funciona</h2>
+                <h2 id="tecno" class="title">Como funciona</h2>
                 <ol class="cards">
                     <li class="card">
                         <span class="number">1</span>
@@ -93,7 +98,7 @@
         </section>
         <section class="section">
             <div class="container">
-                <h2 class="title">Para quem é o Prioriza</h2>
+                <h2 id="audience" class="title">Para quem é o Prioriza</h2>
                 <p>Passageiros com direito ao atendimento prioritário:</p>
                 <ul class="people">
                     <li>Deficiência física</li>
@@ -108,7 +113,7 @@
         </section>
         <section class="section section-blue">
             <div class="container">
-                <h2 class="title">Feito para todas as pessoas</h2>
+                <h2 id="benefit" class="title">Feito para todas as pessoas</h2>
                 <p>Use a barra de acessibilidade no topo de qualquer página.</p>
                 <ul class="cards">
                     <li class="card">
